@@ -38,6 +38,7 @@ body {
 }
 
 .main-nav a {
+.main-nav a:visited {
     color: white;
     text-decoration: none;
     margin: 0 18px;
