@@ -1,4 +1,4 @@
-/* ===== RESET & BASE ===== */
+/* ===== BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -6,141 +6,105 @@
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #f5f6f8;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
     color: #1f2933;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* ===== HEADER / HERO ===== */
+/* ===== HEADER ===== */
 .hero {
-    background-color: #1f2933;
-    color: white;
     text-align: center;
-    padding: 80px 20px 70px;
+    padding: 60px 20px 40px;
 }
 
+/* Encadré nom */
 .hero h1 {
-    font-size: 48px;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
     font-weight: 600;
-    margin-bottom: 10px;
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 12px;
 }
 
+/* Intitulé */
 .subtitle {
-    font-size: 20px;
-    opacity: 0.85;
-    margin-bottom: 35px;
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 30px;
 }
 
 /* ===== NAVIGATION ===== */
 .main-nav {
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
-.main-nav a {
+.main-nav a,
 .main-nav a:visited {
-    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #1f2933 !important;
     text-decoration: none;
-    margin: 0 18px;
-    font-size: 16px;
-    font-weight: 500;
-    position: relative;
+    padding: 8px 16px;
+    border: 1px solid #d1d5db;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
-.main-nav a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #3b82f6;
-    left: 0;
-    bottom: -6px;
-    transition: width 0.3s ease;
+.main-nav a:hover {
+    background-color: #f3f4f6;
 }
 
-.main-nav a:hover::after {
-    width: 100%;
-}
-
-/* ===== BUTTONS (CV) ===== */
+/* ===== BUTTONS CV (ABOUT ME SEULEMENT) ===== */
 .buttons {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .buttons a {
     display: inline-block;
-    margin: 10px;
-    padding: 12px 24px;
-    background-color: #3b82f6;
-    color: white;
+    margin: 6px;
+    padding: 10px 20px;
+    border: 1px solid #1f2933;
+    color: #1f2933;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+    transition: background 0.2s ease;
 }
 
 .buttons a:hover {
-    background-color: #2563eb;
-    transform: translateY(-2px);
+    background-color: #1f2933;
+    color: white;
 }
 
-/* ===== CONTENT SECTIONS ===== */
+/* ===== CONTENT ===== */
 section {
     max-width: 900px;
-    background: white;
     margin: 60px auto;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    padding: 0 20px;
 }
 
 section h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 28px;
     margin-bottom: 20px;
-    color: #1f2933;
 }
 
-section p {
-    font-size: 17px;
-    margin-bottom: 15px;
+section p,
+section li {
+    font-size: 16px;
+    color: #374151;
 }
 
 /* ===== LISTS ===== */
 section ul {
-    margin-top: 15px;
     padding-left: 20px;
 }
 
-section ul li {
+section li {
     margin-bottom: 10px;
-    font-size: 16px;
 }
-
-/* ===== LINKS ===== */
-section a {
-    color: #3b82f6;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-section a:hover {
-    text-decoration: underline;
-}
-
-/* ===== FOOTER (OPTIONAL LATER) ===== */
-footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 14px;
-    color: #6b7280;
-}
-/* ===== FORCE NAV LINK COLORS (ANTI VIOLET) ===== */
-.main-nav a,
-.main-nav a:link,
-.main-nav a:visited,
-.main-nav a:hover,
-.main-nav a:active {
-    color: white !important;
-    text-decoration: none;
-}
-
