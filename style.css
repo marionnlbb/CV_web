@@ -1,153 +1,152 @@
-/* =========================
-   RESET
-========================= */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   BASE
-========================= */
+/* ================= BASE ================= */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
+    background: #ffffff;
     color: #111111;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* ================= HEADER ================= */
 .top-header {
     text-align: center;
-    padding: 80px 20px 40px;
+    padding: 60px 20px 30px;
 }
 
-/* Nom */
+/* Nom (POLICE CONSERVÉE) */
 .name {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 42px;
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
     font-weight: 700;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    margin-bottom: 35px;
-   display: block;
-    text-align: center;
 }
 
-/* =========================
-   NAVIGATION (ANTI VIOLET)
-========================= */
-.minimal-nav {
+/* ================= LAYOUT ================= */
+.layout {
     display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #dddddd;
+    min-height: calc(100vh - 140px);
 }
 
-/* Tous les états des liens */
-.minimal-nav a,
-.minimal-nav a:link,
-.minimal-nav a:visited,
-.minimal-nav a:hover,
-.minimal-nav a:active {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: #999999 !important;
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 260px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Boutons onglets */
+.tab {
+    display: block;
+    padding: 18px 26px;
+    background: #7a8f6a;
+    color: #111111 !important;
+    border-radius: 40px;
     text-decoration: none;
-    padding-bottom: 6px;
-    transition: color 0.2s ease, border-bottom 0.2s ease;
+    font-size: 20px;
+    font-weight: 400;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
 /* Hover */
-.minimal-nav a:hover {
-    color: #111111 !important;
-    border-bottom: 1px solid #111111;
+.tab:hover {
+    transform: translateX(6px);
+    background: #6b7f5e;
 }
 
-/* Page active */
-.minimal-nav a.active {
-    color: #111111 !important;
-    border-bottom: 1px solid #111111;
+/* Onglet actif */
+.tab.active {
+    background: #6b7f5e;
+    font-weight: 500;
 }
 
-/* =========================
-   CONTENT
-========================= */
-section {
-    max-width: 900px;
-    margin: 90px auto;
-    padding: 0 20px;
+/* ================= CONTENT ================= */
+.content {
+    flex: 1;
+    padding: 60px 80px;
 }
 
-/* Titres */
-section h2 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 32px;
-    font-weight: 700;
+/* Titres pages */
+.content h1 {
+    font-size: 42px;
+    letter-spacing: 0.1em;
+    color: #7a8f6a;
+    border: 2px solid #7a8f6a;
+    display: inline-block;
+    padding: 10px 26px;
     margin-bottom: 30px;
 }
 
 /* Texte */
-section p,
-section li {
-    font-size: 17px;
-    color: #333333;
+.content p,
+.content li {
+    font-size: 18px;
+    max-width: 700px;
+    color: #222222;
 }
 
-/* =========================
-   LISTES
-========================= */
-section ul {
+/* Listes */
+.content ul {
     padding-left: 20px;
 }
 
-section li {
+.content li {
     margin-bottom: 14px;
 }
 
-/* =========================
-   LIENS DANS LE CONTENU
-========================= */
-section a,
-section a:visited {
-    color: #111111;
+/* Liens contenu */
+.content a,
+.content a:visited {
+    color: #111111 !important;
     text-decoration: underline;
 }
 
-section a:hover {
+.content a:hover {
     text-decoration: none;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-
-    .name {
-        font-size: 32px;
-        letter-spacing: 0.1em;
-    }
-
-    .minimal-nav {
-        gap: 25px;
-    }
-
-    section {
-        margin: 60px auto;
-    }
-}
-/* ===== NO VIOLET LINKS EVER ===== */
+/* ================= NO VIOLET EVER ================= */
 a,
 a:link,
 a:visited,
 a:hover,
 a:active {
-    color: #111111 !important;
+    color: inherit !important;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        font-size: 16px;
+        padding: 14px 20px;
+    }
+
+    .content {
+        padding: 40px 30px;
+    }
+
+    .name {
+        font-size: 34px;
+        letter-spacing: 0.12em;
+    }
 }
