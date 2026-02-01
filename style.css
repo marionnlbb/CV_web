@@ -134,4 +134,13 @@ footer {
     font-size: 14px;
     color: #6b7280;
 }
+/* ===== FORCE NAV LINK COLORS (ANTI VIOLET) ===== */
+.main-nav a,
+.main-nav a:link,
+.main-nav a:visited,
+.main-nav a:hover,
+.main-nav a:active {
+    color: white !important;
+    text-decoration: none;
+}
 
