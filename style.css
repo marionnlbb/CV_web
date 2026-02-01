@@ -143,3 +143,11 @@ section a:hover {
         margin: 60px auto;
     }
 }
+/* ===== NO VIOLET LINKS EVER ===== */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #111111 !important;
+}
