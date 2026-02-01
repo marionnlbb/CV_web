@@ -23,3 +23,21 @@ section {
 h2 {
     color: #1f2933;
 }
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background: #1f2933;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.buttons a:hover {
+    background: #3b82f6;
+}
