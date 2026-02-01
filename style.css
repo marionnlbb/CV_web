@@ -1,103 +1,87 @@
-/* =========================
-   RESET
-========================= */
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   BASE
-========================= */
+/* ===== BASE ===== */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
     color: #111111;
+    line-height: 1.8;
 }
 
-/* =========================
-   HEADER HAUT (NOM)
-========================= */
+/* ===== HEADER ===== */
 .top-header {
     text-align: center;
-    padding: 60px 20px 40px;
+    padding: 80px 20px 40px;
 }
 
 .name {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 44px;
     font-weight: 700;
     letter-spacing: 0.18em;
-}
-
-/* =========================
-   LAYOUT
-========================= */
-.layout {
-    display: flex;
-    min-height: calc(100vh - 140px);
-}
-
-/* =========================
-   SIDEBAR GAUCHE
-========================= */
-.sidebar {
-    width: 260px;
-    padding: 40px 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Onglets */
-.tab {
-    text-decoration: none;
-    font-size: 15px;
-    padding: 14px 20px;
-    border-radius: 999px;
-    background-color: #8a9a7b;
-    color: #111111;
-    text-align: center;
-    transition: all 0.25s ease;
-}
-
-/* Hover */
-.tab:hover {
-    background-color: #748466;
-    transform: translateX(6px);
-}
-
-/* Onglet actif */
-.tab.active {
-    background-color: #5f6f55;
-    font-weight: 600;
-}
-
-/* =========================
-   CONTENU
-========================= */
-.content {
-    flex: 1;
-    padding: 60px 100px;
-}
-
-/* Titre page */
-.content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 38px;
-    letter-spacing: 0.08em;
+    text-transform: uppercase;
     margin-bottom: 40px;
 }
 
-/* Texte */
-.content p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 25px;
+/* ===== NAVIGATION ===== */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #dddddd;
 }
 
-/* Liens */
+.nav-link,
+.nav-link:link,
+.nav-link:visited {
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #9a9a9a;
+    text-decoration: none;
+    padding-bottom: 6px;
+}
+
+.nav-link:hover {
+    color: #111111;
+}
+
+.nav-link.active {
+    color: #111111;
+    border-bottom: 1px solid #111111;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    max-width: 900px;
+    margin: 90px auto;
+    padding: 0 20px;
+}
+
+.content h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.content p,
+.content li {
+    font-size: 17px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    padding-left: 20px;
+}
+
+/* ===== LINKS IN CONTENT ===== */
 .content a {
     color: #111111;
     text-decoration: underline;
@@ -107,28 +91,20 @@ body {
     text-decoration: none;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-
-    .layout {
-        flex-direction: column;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .name {
+        font-size: 32px;
+        letter-spacing: 0.12em;
     }
 
-    .sidebar {
-        width: 100%;
-        flex-direction: row;
+    .nav {
+        gap: 25px;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid #dddddd;
     }
 
     .content {
-        padding: 40px 30px;
+        margin: 60px auto;
     }
 }
-
 
