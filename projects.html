@@ -5,51 +5,58 @@
     <title>Marion Lebeau | Projects</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HEADER (NOM CENTRÉ EN HAUT) -->
 <header class="top-header">
-
-    <h1 class="name">Marion Lebeau</h1>
-
-    <nav class="minimal-nav">
-        <a href="index.html">About Me</a>
-        <a href="journey.html">My Journey</a>
-        <a href="projects.html">Projects</a>
-        <a href="hobbies.html">Hobbies</a>
-        <a href="contact.html">Get in Touch</a>
-    </nav>
-
+    <h1 class="name">MARION LEBEAU</h1>
 </header>
 
-<section>
-    <h2>Projects</h2>
+<!-- LAYOUT PORTEFEUILLE -->
+<div class="layout">
 
-    <ul>
-        <li>
-            <strong>Energy Management System</strong><br>
-            Design and implementation of a smart energy management system
-            using Java and system-level modeling.
-        </li>
+    <!-- MENU GAUCHE -->
+    <aside class="sidebar">
+        <a href="index.html" class="tab">About Me</a>
+        <a href="journey.html" class="tab">My Journey</a>
+        <a href="projects.html" class="tab active">Projects</a>
+        <a href="hobbies.html" class="tab">Hobbies</a>
+        <a href="contact.html" class="tab">Get in Touch</a>
+    </aside>
 
-        <li>
-            <strong>Low-tech Wind Turbine</strong><br>
-            Design and prototyping of a Pigott-type wind turbine using CAD,
-            CNC machining and 3D printing.
-        </li>
+    <!-- CONTENU -->
+    <main class="content">
 
-        <li>
-            <strong>Decarbonized Propulsion Study</strong><br>
-            Technical and economic analysis of hydrogen-based propulsion
-            systems for marine applications.
-        </li>
-    </ul>
+        <h1>PROJECTS</h1>
 
-</section>
+        <ul>
+            <li>
+                <strong>Energy Management System</strong><br>
+                Design and implementation of a smart energy management system
+                using Java and system-level modeling.
+            </li>
+
+            <li>
+                <strong>Low-tech Wind Turbine</strong><br>
+                Design and prototyping of a Pigott-type wind turbine using CAD,
+                CNC machining and 3D printing.
+            </li>
+
+            <li>
+                <strong>Decarbonized Propulsion Study</strong><br>
+                Technical and economic analysis of hydrogen-based propulsion
+                systems for marine applications.
+            </li>
+        </ul>
+
+    </main>
+
+</div>
 
 </body>
 </html>
