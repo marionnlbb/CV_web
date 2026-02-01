@@ -1,110 +1,136 @@
-body {
-    font-family: Arial, sans-serif;
+/* ===== RESET & BASE ===== */
+* {
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    box-sizing: border-box;
 }
 
-header {
-    background: #1f2933;
-    color: white;
-    padding: 40px;
-    text-align: center;
-}
-
-section {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    border-radius: 8px;
-}
-
-h2 {
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f6f8;
     color: #1f2933;
-}
-.buttons {
-    margin-top: 20px;
+    line-height: 1.6;
 }
 
-.buttons a {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 20px;
-    background: #1f2933;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-.buttons a:hover {
-    background: #3b82f6;
-}
-nav {
-    background: #1f2933;
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
+/* ===== HEADER / HERO ===== */
 .hero {
-    background: #1f2933;
+    background-color: #1f2933;
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 80px 20px 70px;
 }
 
 .hero h1 {
     font-size: 48px;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
 .subtitle {
     font-size: 20px;
     opacity: 0.85;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
+/* ===== NAVIGATION ===== */
 .main-nav {
     margin-bottom: 30px;
 }
 
 .main-nav a {
     color: white;
-    margin: 0 20px;
     text-decoration: none;
-    font-weight: 500;
+    margin: 0 18px;
     font-size: 16px;
+    font-weight: 500;
+    position: relative;
 }
 
-.main-nav a:hover {
-    text-decoration: underline;
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #3b82f6;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== BUTTONS (CV) ===== */
+.buttons {
+    margin-top: 30px;
 }
 
 .buttons a {
     display: inline-block;
     margin: 10px;
-    padding: 12px 22px;
-    background: #3b82f6;
+    padding: 12px 24px;
+    background-color: #3b82f6;
     color: white;
     text-decoration: none;
     border-radius: 6px;
-    font-weight: bold;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .buttons a:hover {
-    background: #2563eb;
+    background-color: #2563eb;
+    transform: translateY(-2px);
 }
 
+/* ===== CONTENT SECTIONS ===== */
+section {
+    max-width: 900px;
+    background: white;
+    margin: 60px auto;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #1f2933;
+}
+
+section p {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+/* ===== LISTS ===== */
+section ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* ===== LINKS ===== */
+section a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+/* ===== FOOTER (OPTIONAL LATER) ===== */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #6b7280;
+}
 
