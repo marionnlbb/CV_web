@@ -1,110 +1,143 @@
-/* ===== BASE ===== */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* =========================
+   BASE
+========================= */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
-    color: #1f2933;
-    line-height: 1.7;
+    color: #111111;
+    line-height: 1.8;
 }
 
-/* ===== HEADER ===== */
-.hero {
+/* =========================
+   HEADER
+========================= */
+.top-header {
     text-align: center;
-    padding: 60px 20px 40px;
+    padding: 80px 20px 40px;
 }
 
-/* Encadré nom */
-.hero h1 {
-    font-family: 'Playfair Display', serif;
+/* Nom */
+.name {
+    font-family: 'Libre Baskerville', serif;
     font-size: 42px;
-    font-weight: 600;
-    display: inline-block;
-    padding: 14px 28px;
-    border: 1px solid #d1d5db;
-    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 35px;
 }
 
-/* Intitulé */
-.subtitle {
-    font-size: 16px;
-    color: #4b5563;
-    margin-bottom: 30px;
-}
-
-/* ===== NAVIGATION ===== */
-.main-nav {
+/* =========================
+   NAVIGATION (ANTI VIOLET)
+========================= */
+.minimal-nav {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 50px;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dddddd;
 }
 
-.main-nav a,
-.main-nav a:visited {
+/* Tous les états des liens */
+.minimal-nav a,
+.minimal-nav a:link,
+.minimal-nav a:visited,
+.minimal-nav a:hover,
+.minimal-nav a:active {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    color: #1f2933 !important;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #999999 !important;
     text-decoration: none;
-    padding: 8px 16px;
-    border: 1px solid #d1d5db;
-    transition: background 0.2s ease, color 0.2s ease;
+    padding-bottom: 6px;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 
-.main-nav a:hover {
-    background-color: #f3f4f6;
+/* Hover */
+.minimal-nav a:hover {
+    color: #111111 !important;
+    border-bottom: 1px solid #111111;
 }
 
-/* ===== BUTTONS CV (ABOUT ME SEULEMENT) ===== */
-.buttons {
-    margin-top: 25px;
+/* Page active */
+.minimal-nav a.active {
+    color: #111111 !important;
+    border-bottom: 1px solid #111111;
 }
 
-.buttons a {
-    display: inline-block;
-    margin: 6px;
-    padding: 10px 20px;
-    border: 1px solid #1f2933;
-    color: #1f2933;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background 0.2s ease;
-}
-
-.buttons a:hover {
-    background-color: #1f2933;
-    color: white;
-}
-
-/* ===== CONTENT ===== */
+/* =========================
+   CONTENT
+========================= */
 section {
     max-width: 900px;
-    margin: 60px auto;
+    margin: 90px auto;
     padding: 0 20px;
 }
 
+/* Titres */
 section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
+/* Texte */
 section p,
 section li {
-    font-size: 16px;
-    color: #374151;
+    font-size: 17px;
+    color: #333333;
 }
 
-/* ===== LISTS ===== */
+/* =========================
+   LISTES
+========================= */
 section ul {
     padding-left: 20px;
 }
 
 section li {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+}
+
+/* =========================
+   LIENS DANS LE CONTENU
+========================= */
+section a,
+section a:visited {
+    color: #111111;
+    text-decoration: underline;
+}
+
+section a:hover {
+    text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    .name {
+        font-size: 32px;
+        letter-spacing: 0.1em;
+    }
+
+    .minimal-nav {
+        gap: 25px;
+    }
+
+    section {
+        margin: 60px auto;
+    }
 }
