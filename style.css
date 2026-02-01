@@ -58,3 +58,53 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.hero {
+    background: #1f2933;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    opacity: 0.85;
+    margin-bottom: 40px;
+}
+
+.main-nav {
+    margin-bottom: 30px;
+}
+
+.main-nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 22px;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.buttons a:hover {
+    background: #2563eb;
+}
+
+
