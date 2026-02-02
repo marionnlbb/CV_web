@@ -78,41 +78,27 @@ body {
 
 /* ================= ABOUT ME ================= */
 
-/* wrapper global */
+/* ===== ABOUT LAYOUT ===== */
 .about-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-/* ligne photo + intro */
-.about-top {
     display: flex;
     align-items: flex-start;
     gap: 40px;
+    margin-top: 40px;
 }
 
-/* photo */
 .about-photo {
-    width: 140px;
-    height: auto;
-    border-radius: 2px;
+    width: 180px;   /* photo plus petite */
+    flex-shrink: 0;
 }
 
-/* texte à droite de la photo */
-.about-intro {
-    max-width: 600px;
+.about-photo img,
+.about-photo {
+    border-radius: 4px;
 }
 
-.about-intro h2 {
-    margin-bottom: 20px;
-}
-
-/* texte en dessous (pleine largeur) */
 .about-text {
-    max-width: 850px;
+    flex: 1;
 }
-
 /* ================= CV BOXES ================= */
 .cv-boxes {
     display: flex;
