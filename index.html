@@ -9,6 +9,24 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- SCRIPT -->
+    <script>
+        function showCV(lang) {
+            const frame = document.getElementById("cv-frame");
+            const buttons = document.querySelectorAll(".cv-btn");
+
+            buttons.forEach(btn => btn.classList.remove("active"));
+
+            if (lang === "en") {
+                frame.src = "CV_English_LEBEAU.pdf";
+                buttons[0].classList.add("active");
+            } else {
+                frame.src = "CV_en_français.pdf";
+                buttons[1].classList.add("active");
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -25,72 +43,56 @@
     </nav>
 </header>
 
-<section class="content">
+<section class="content about-me">
 
-    <!-- BLOC PHOTO + TEXTE -->
+    <!-- PHOTO À GAUCHE / TEXTE À DROITE -->
     <div class="about-wrapper">
 
-        <img 
-            src="WhatsApp Image 2025-10-04 à 14.37.54_5e703bef.jpg"
-            alt="Marion Lebeau portrait"
-            class="about-photo"
-        >
+        <img src="photo.jpg" alt="Marion Lebeau portrait" class="about-photo">
 
         <div class="about-text">
             <h2>A Closer Look at My CV</h2>
 
             <p>
-                My name is Marion Lebeau, and I am currently a second-year engineering
-                student at IMT Atlantique, specializing in nuclear energy.
+                My name is Marion Lebeau, and I am currently a second-year engineering student at IMT Atlantique,
+                specializing in nuclear energy.
             </p>
 
             <p>
-                My academic background is rooted in materials science and energy engineering,
-                with a strong interest in complex technical systems and critical infrastructures.
+                My academic background is rooted in materials science and energy engineering, with a strong
+                interest in complex technical systems and critical infrastructures.
             </p>
 
             <p>
-                In parallel, I am particularly interested in renewable energies and environmental
-                transition. I aim to build a professional path that bridges advanced energy
-                technologies with sustainability challenges.
+                In parallel, I am particularly interested in renewable energies and environmental transition.
+                I aim to build a professional path that bridges advanced energy technologies with sustainability
+                challenges.
             </p>
 
             <p>
-                Curious and motivated, I am looking to evolve in international and multidisciplinary
-                environments, where engineering and environmental commitment come together.
+                Curious and motivated, I am looking to evolve in international and multidisciplinary environments,
+                where engineering and environmental commitment come together.
             </p>
-
-            <!-- BOUTONS CV -->
-            <div class="cv-boxes">
-                <button class="cv-box primary" onclick="showCV('en')">CV – English</button>
-                <button class="cv-box" onclick="showCV('fr')">CV – Français</button>
-            </div>
         </div>
 
     </div>
 
-    <!-- VISUALISEUR CV -->
+    <!-- BOUTONS CV -->
+    <div class="cv-switch">
+        <button class="cv-btn active" onclick="showCV('en')">CV English</button>
+        <button class="cv-btn" onclick="showCV('fr')">CV Français</button>
+    </div>
+
+    <!-- AFFICHAGE DU CV -->
     <div class="cv-viewer">
         <iframe
             id="cv-frame"
             src="CV_English_LEBEAU.pdf"
-            title="Marion Lebeau CV"
-        ></iframe>
+            title="Marion Lebeau CV">
+        </iframe>
     </div>
 
 </section>
-
-<script>
-function showCV(lang) {
-    const frame = document.getElementById("cv-frame");
-
-    if (lang === "en") {
-        frame.src = "CV_English_LEBEAU.pdf";
-    } else {
-        frame.src = "CV_en_français.pdf";
-    }
-}
-</script>
 
 </body>
 </html>
