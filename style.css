@@ -1,11 +1,11 @@
-/* ===== RESET ===== */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BASE ===== */
+/* ================= BASE ================= */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
@@ -13,7 +13,7 @@ body {
     line-height: 1.8;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
 .top-header {
     text-align: center;
     padding: 80px 20px 40px;
@@ -28,7 +28,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* ===== NAVIGATION ===== */
+/* ================= NAVIGATION (PAOLA) ================= */
 .nav {
     display: flex;
     justify-content: center;
@@ -57,7 +57,7 @@ body {
     border-bottom: 1px solid #111111;
 }
 
-/* ===== CONTENT ===== */
+/* ================= CONTENT ================= */
 .content {
     max-width: 900px;
     margin: 90px auto;
@@ -70,19 +70,47 @@ body {
     margin-bottom: 30px;
 }
 
-.content p,
-.content li {
+.content p {
     font-size: 17px;
     color: #333333;
     margin-bottom: 20px;
 }
 
+/* ================= ABOUT ME ================= */
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-photo {
+    width: 260px;
+    height: auto;
+    border-radius: 2px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.cv-links a {
+    font-size: 15px;
+}
+
+/* ================= LISTS ================= */
 .content ul {
     padding-left: 20px;
 }
 
-/* ===== LINKS IN CONTENT ===== */
-.content a {
+.content li {
+    font-size: 17px;
+    color: #333333;
+    margin-bottom: 12px;
+}
+
+/* ================= LINKS ================= */
+.content a,
+.content a:visited {
     color: #111111;
     text-decoration: underline;
 }
@@ -91,8 +119,9 @@ body {
     text-decoration: none;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
+
     .name {
         font-size: 32px;
         letter-spacing: 0.12em;
@@ -105,6 +134,15 @@ body {
 
     .content {
         margin: 60px auto;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo {
+        width: 220px;
     }
 }
 
