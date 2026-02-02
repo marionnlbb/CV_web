@@ -62,8 +62,10 @@ body {
 }
 
 .about-photo {
-    width: 180px;
-    flex-shrink: 0;
+    width: 280px;        /* ← AUGMENTE ICI (250–320 selon ton goût) */
+    height: auto;
+    flex-shrink: 0;      /* ← OBLIGATOIRE pour qu’elle reste grande */
+    border-radius: 4px;
 }
 
 .about-text h2 {
