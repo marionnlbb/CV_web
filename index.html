@@ -6,6 +6,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+   <script>
+function showCV(lang) {
+    const frame = document.getElementById("cv-frame");
+    const buttons = document.querySelectorAll(".cv-btn");
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    if (lang === "en") {
+        frame.src = "CV_English_LEBEAU.pdf";
+        buttons[0].classList.add("active");
+    } else {
+        frame.src = "CV_en_français.pdf";
+        buttons[1].classList.add("active");
+    }
+}
+</script> 
 <body>
 
 <header class="top-header">
