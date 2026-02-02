@@ -51,17 +51,21 @@
             Curious and motivated, I am looking to evolve in international and multidisciplinary environments,
             where engineering, innovation and environmental commitment come together to shape future energy systems.
         </p>
-        <div class="cv-boxes">
-        
-            <a href="CV_English_LEBEAU.pdf" target="_blank" class="cv-box primary">
-                CV – English
-            </a>
-        
-            <a href="CV_en_français.pdf" target="_blank" class="cv-box">
-                CV – Français
-            </a>
-        
-        </div>
+        <!-- CV SELECTOR -->
+<div class="cv-switch">
+    <button class="cv-btn active" onclick="showCV('en')">CV English</button>
+    <button class="cv-btn" onclick="showCV('fr')">CV Français</button>
+</div>
+
+<!-- CV VIEWER -->
+<div class="cv-viewer">
+    <iframe
+        id="cv-frame"
+        src="CV_English_LEBEAU.pdf"
+        title="Marion Lebeau CV"
+    ></iframe>
+</div>
+
 </section>
 
 </body>
