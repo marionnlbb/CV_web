@@ -12,7 +12,7 @@
             const frame = document.getElementById("cv-frame");
             const buttons = document.querySelectorAll(".cv-btn");
 
-            buttons.forEach(btn => btn.classList.remove("active"));
+            buttons.forEach(b => b.classList.remove("active"));
 
             if (lang === "en") {
                 frame.src = "CV_English_LEBEAU.pdf";
@@ -41,8 +41,9 @@
 
 <section class="content">
 
+    <!-- PHOTO GAUCHE / TEXTE DROITE -->
     <div class="about-wrapper">
-        <img src="photo.jpg" alt="Marion Lebeau portrait" class="about-photo">
+        <img src="photo.jpg" class="about-photo" alt="Marion Lebeau">
 
         <div class="about-text">
             <h2>A Closer Look at My CV</h2>
@@ -53,29 +54,30 @@
             </p>
 
             <p>
-                My academic background is rooted in materials science and energy engineering,
-                with a strong interest in complex technical systems and critical infrastructures.
+                My background is rooted in materials science and energy engineering,
+                with a strong interest in complex technical systems.
             </p>
 
             <p>
-                I am particularly interested in renewable energies and environmental transition,
-                aiming to bridge advanced energy technologies with sustainability challenges.
-            </p>
-
-            <p>
-                Curious and motivated, I aspire to evolve in international and multidisciplinary
-                environments where engineering and environmental commitment come together.
+                I am also deeply interested in renewable energies and environmental
+                transition, aiming to bridge advanced energy technologies with sustainability.
             </p>
         </div>
     </div>
 
+    <!-- SWITCH CV -->
     <div class="cv-switch">
         <button class="cv-btn active" onclick="showCV('en')">CV English</button>
         <button class="cv-btn" onclick="showCV('fr')">CV Français</button>
     </div>
 
+    <!-- PDF -->
     <div class="cv-viewer">
-        <iframe id="cv-frame" src="CV_English_LEBEAU.pdf"></iframe>
+        <iframe
+            id="cv-frame"
+            src="CV_English_LEBEAU.pdf"
+            loading="lazy">
+        </iframe>
     </div>
 
 </section>
