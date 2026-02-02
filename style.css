@@ -80,11 +80,11 @@ body {
 .about-wrapper {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 50px;
 }
 
 .about-photo {
-    width: 260px;
+    width: 160px;
     height: auto;
     border-radius: 2px;
 }
