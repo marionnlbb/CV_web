@@ -55,28 +55,31 @@ body {
 
 /* ABOUT */
 .about-wrapper {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
-    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 320px 1fr;  /* ← PHOTO GROSSE + TEXTE */
+    gap: 60px;
+    align-items: start;
+    margin-bottom: 60px;
 }
 
-.about-photo {
-    width: 280px;        /* ← AUGMENTE ICI (250–320 selon ton goût) */
+/* PHOTO */
+.about-photo-wrapper img {
+    width: 100%;
     height: auto;
-    flex-shrink: 0;      /* ← OBLIGATOIRE pour qu’elle reste grande */
     border-radius: 4px;
 }
 
+/* TEXTE */
 .about-text h2 {
     font-family: 'Libre Baskerville', serif;
     font-size: 34px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .about-text p {
-    margin-bottom: 16px;
     font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 18px;
     color: #333;
 }
 
