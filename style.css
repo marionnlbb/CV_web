@@ -188,37 +188,27 @@ body {
         flex-wrap: wrap;
     }
 }
-/* ================= CV VIEWER ================= */
-
+/* ===== CV VIEWER ===== */
 .cv-switch {
     display: flex;
     gap: 20px;
-    margin: 50px 0 20px;
+    margin: 40px 0 20px;
 }
 
 .cv-btn {
     padding: 12px 24px;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
     border: 1px solid #cccccc;
     background: white;
     cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.cv-btn:hover {
-    background-color: #f3f3f3;
 }
 
 .cv-btn.active {
-    background-color: #111111;
+    background: #111;
     color: white;
-    border-color: #111111;
 }
 
 .cv-viewer {
-    width: 100%;
-    border: 1px solid #dddddd;
+    border: 1px solid #ddd;
 }
 
 .cv-viewer iframe {
@@ -226,4 +216,3 @@ body {
     height: 900px;
     border: none;
 }
-
