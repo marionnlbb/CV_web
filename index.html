@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <title>Marion Lebeau | About Me</title>
 
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- SCRIPT -->
     <script>
         function showCV(lang) {
             const frame = document.getElementById("cv-frame");
@@ -43,53 +39,43 @@
     </nav>
 </header>
 
-<section class="content about-me">
+<section class="content">
 
-    <!-- PHOTO À GAUCHE / TEXTE À DROITE -->
     <div class="about-wrapper">
-
         <img src="photo.jpg" alt="Marion Lebeau portrait" class="about-photo">
 
         <div class="about-text">
             <h2>A Closer Look at My CV</h2>
 
             <p>
-                My name is Marion Lebeau, and I am currently a second-year engineering student at IMT Atlantique,
+                I am a second-year engineering student at IMT Atlantique,
                 specializing in nuclear energy.
             </p>
 
             <p>
-                My academic background is rooted in materials science and energy engineering, with a strong
-                interest in complex technical systems and critical infrastructures.
+                My academic background is rooted in materials science and energy engineering,
+                with a strong interest in complex technical systems and critical infrastructures.
             </p>
 
             <p>
-                In parallel, I am particularly interested in renewable energies and environmental transition.
-                I aim to build a professional path that bridges advanced energy technologies with sustainability
-                challenges.
+                I am particularly interested in renewable energies and environmental transition,
+                aiming to bridge advanced energy technologies with sustainability challenges.
             </p>
 
             <p>
-                Curious and motivated, I am looking to evolve in international and multidisciplinary environments,
-                where engineering and environmental commitment come together.
+                Curious and motivated, I aspire to evolve in international and multidisciplinary
+                environments where engineering and environmental commitment come together.
             </p>
         </div>
-
     </div>
 
-    <!-- BOUTONS CV -->
     <div class="cv-switch">
         <button class="cv-btn active" onclick="showCV('en')">CV English</button>
         <button class="cv-btn" onclick="showCV('fr')">CV Français</button>
     </div>
 
-    <!-- AFFICHAGE DU CV -->
     <div class="cv-viewer">
-        <iframe
-            id="cv-frame"
-            src="CV_English_LEBEAU.pdf"
-            title="Marion Lebeau CV">
-        </iframe>
+        <iframe id="cv-frame" src="CV_English_LEBEAU.pdf"></iframe>
     </div>
 
 </section>
