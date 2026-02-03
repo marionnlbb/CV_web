@@ -222,3 +222,11 @@ body {
         display: block;
     }
 }
+/* ===== JOURNEY IMAGE ===== */
+.journey-image {
+    width: 100%;
+    max-width: 480px;
+    margin-top: 20px;
+    border-radius: 4px;
+    display: block;
+}
