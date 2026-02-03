@@ -66,6 +66,13 @@ body {
     gap: 50px;
     align-items: start;
 }
+/* ===== ABOUT PHOTO ===== */
+.about-photo {
+    width: 100%;
+    max-width: 220px;   /* ← ajuste ici la taille réelle */
+    height: auto;
+    border-radius: 4px;
+}
 /* ===== TIMELINE ===== */
 .timeline {
     position: relative;
