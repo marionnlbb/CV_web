@@ -60,7 +60,12 @@ body {
     font-size: 34px;
     margin-bottom: 60px;
 }
-
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 240px 1fr; /* ← photo plus petite */
+    gap: 50px;
+    align-items: start;
+}
 /* ===== TIMELINE ===== */
 .timeline {
     position: relative;
