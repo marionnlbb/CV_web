@@ -28,51 +28,75 @@
 
     <div class="timeline">
 
-        <!-- ITEM 1 (RÉCENT - DROITE) -->
-        <div class="timeline-item right">
+        <!-- ITEM 1 -->
+        <div class="timeline-item right clickable">
             <span class="timeline-dot"></span>
-            <div class="timeline-content">
+
+            <div class="timeline-content" onclick="toggleDetail(this)">
                 <h3>2025 – 2026</h3>
+                <p><strong>Nuclear Energy Specialization – IMT Atlantique</strong></p>
+            </div>
+
+            <div class="timeline-detail">
                 <p>
-                    <strong>Nuclear Energy Specialization – IMT Atlantique</strong><br>
-                    Focus on nuclear systems, safety, energy production and critical infrastructures.
+                    Advanced coursework focused on nuclear systems, safety analysis,
+                    critical infrastructures and large-scale energy production.
                 </p>
+                <img src="images/nuclear.jpg" alt="Nuclear energy studies">
             </div>
         </div>
 
-        <!-- ITEM 2 (GAUCHE) -->
-        <div class="timeline-item left">
+        <!-- ITEM 2 -->
+        <div class="timeline-item left clickable">
             <span class="timeline-dot"></span>
-            <div class="timeline-content">
+
+            <div class="timeline-content" onclick="toggleDetail(this)">
                 <h3>2024 – 2025</h3>
+                <p><strong>Engineering Studies – IMT Atlantique</strong></p>
+            </div>
+
+            <div class="timeline-detail">
                 <p>
-                    <strong>Engineering Studies – IMT Atlantique</strong><br>
-                    Core engineering curriculum with strong emphasis on energy systems and materials science.
+                    Core engineering curriculum with strong emphasis on energy systems,
+                    materials science and multidisciplinary technical projects.
                 </p>
+                <img src="images/imt.jpg" alt="IMT Atlantique">
             </div>
         </div>
 
-        <!-- ITEM 3 (DROITE) -->
-        <div class="timeline-item right">
+        <!-- ITEM 3 -->
+        <div class="timeline-item right clickable">
             <span class="timeline-dot"></span>
-            <div class="timeline-content">
+
+            <div class="timeline-content" onclick="toggleDetail(this)">
                 <h3>2024</h3>
+                <p><strong>Renewable Energies & Environmental Transition</strong></p>
+            </div>
+
+            <div class="timeline-detail">
                 <p>
-                    <strong>Growing Interest in Renewable Energies</strong><br>
-                    Progressive focus on environmental transition and sustainable energy solutions.
+                    Progressive interest in renewable energies, sustainability challenges
+                    and low-carbon solutions for future energy systems.
                 </p>
+                <img src="images/renewable.jpg" alt="Renewable energy">
             </div>
         </div>
 
-        <!-- ITEM 4 (GAUCHE - ANCIEN) -->
-        <div class="timeline-item left">
+        <!-- ITEM 4 -->
+        <div class="timeline-item left clickable">
             <span class="timeline-dot"></span>
-            <div class="timeline-content">
+
+            <div class="timeline-content" onclick="toggleDetail(this)">
                 <h3>2023</h3>
+                <p><strong>Materials Science & Energy Background</strong></p>
+            </div>
+
+            <div class="timeline-detail">
                 <p>
-                    <strong>Background in Materials Science & Energy</strong><br>
-                    Foundations in materials behavior, energy conversion and industrial processes.
+                    Foundations in materials behavior, energy conversion processes
+                    and industrial systems analysis.
                 </p>
+                <img src="images/materials.jpg" alt="Materials science">
             </div>
         </div>
 
@@ -80,7 +104,27 @@
 
 </section>
 
+<!-- ===== SCRIPTS ===== -->
+<script>
+    /* Animation au scroll */
+    const items = document.querySelectorAll('.timeline-item');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    items.forEach(item => observer.observe(item));
+
+    /* Ouverture / fermeture détail */
+    function toggleDetail(element) {
+        const item = element.closest('.timeline-item');
+        item.classList.toggle('open');
+    }
+</script>
+
 </body>
 </html>
-
-
