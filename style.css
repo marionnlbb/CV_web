@@ -257,3 +257,66 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ===== INTERACTIVE JOURNEY ===== */
+
+.timeline-content {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-2px);
+}
+
+/* Phrase courte */
+.timeline-preview {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Bloc caché */
+.timeline-detail {
+    margin-top: 20px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.timeline-detail ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.timeline-detail li {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.timeline-detail img {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+/* État ouvert */
+.timeline-item.open .timeline-detail {
+    display: block;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
