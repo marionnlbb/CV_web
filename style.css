@@ -141,19 +141,12 @@ body {
         margin: 0 auto;
     }
 }
-/* ===== JOURNEY TIMELINE ===== */
-
-.journey-title {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 34px;
-    margin-bottom: 80px;
-    text-align: center;
-}
+/* ===== TIMELINE ===== */
 
 .timeline {
     position: relative;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 80px auto;
 }
 
 /* Ligne centrale */
@@ -164,16 +157,16 @@ body {
     bottom: 0;
     left: 50%;
     width: 1px;
-    background: #dddddd;
+    background: #ddd;
     transform: translateX(-50%);
 }
 
-/* Item */
+/* Item général */
 .timeline-item {
     position: relative;
     width: 50%;
     padding: 20px 40px;
-    margin-bottom: 80px;
+    box-sizing: border-box;
 }
 
 /* Gauche */
@@ -191,23 +184,29 @@ body {
 /* Point */
 .timeline-dot {
     position: absolute;
-    top: 30px;
+    top: 32px;
     width: 12px;
     height: 12px;
     background: #111;
     border-radius: 50%;
-    left: calc(100% - 6px);
+    z-index: 2;
 }
 
+/* Point côté gauche */
+.timeline-item.left .timeline-dot {
+    right: -6px;
+}
+
+/* Point côté droit */
 .timeline-item.right .timeline-dot {
     left: -6px;
 }
 
 /* Contenu */
 .timeline-content {
-    background: #ffffff;
+    background: white;
+    border: 1px solid #ddd;
     padding: 20px 24px;
-    border: 1px solid #dddddd;
 }
 
 .timeline-content h3 {
@@ -218,33 +217,24 @@ body {
 
 .timeline-content p {
     font-size: 15px;
-    color: #333333;
+    color: #333;
     line-height: 1.6;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-
     .timeline::before {
         left: 10px;
     }
 
     .timeline-item {
         width: 100%;
+        left: 0 !important;
         padding-left: 40px;
-        padding-right: 20px;
         text-align: left;
     }
 
-    .timeline-item.left,
-    .timeline-item.right {
-        left: 0;
-    }
-
     .timeline-dot {
-        left: 4px;
+        left: 4px !important;
     }
 }
-/* force rebuild */
-
-
