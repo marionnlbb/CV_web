@@ -73,6 +73,36 @@ body {
     height: auto;
     border-radius: 4px;
 }
+.cv-switch {
+    display: flex;
+    justify-content: center;   /* ← centre horizontalement */
+    gap: 12px;
+    margin: 15px 0 25px;
+}
+.cv-viewer {
+    display: flex;
+    justify-content: center;   /* ← centre le PDF */
+    margin-top: 20px;
+}
+
+.cv-viewer iframe {
+    width: 100%;
+    max-width: 800px;          /* ← largeur élégante */
+    height: 900px;
+    border: 1px solid #ddd;
+}
+.cv-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    border: 1px solid #111;
+    background: white;
+    cursor: pointer;
+}
+
+.cv-btn:hover {
+    background: #111;
+    color: white;
+}
 /* ===== TIMELINE ===== */
 .timeline {
     position: relative;
