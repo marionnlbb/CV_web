@@ -185,4 +185,10 @@ body {
         left: 14px;
     }
 }
-
+@media (max-width: 768px) {
+    .about-photo {
+        max-width: 180px;
+        margin: 0 auto 20px;
+        display: block;
+    }
+}
