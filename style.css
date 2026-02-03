@@ -1,21 +1,18 @@
-body {
-    background: red !important;
-}
-/* ================= RESET ================= */
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ================= BASE ================= */
+/* ===== BASE ===== */
 body {
     font-family: 'Inter', sans-serif;
     background: white;
     color: #111;
 }
 
-/* ================= HEADER ================= */
+/* ===== HEADER ===== */
 .top-header {
     text-align: center;
     padding: 80px 20px 40px;
@@ -29,7 +26,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* ================= NAV ================= */
+/* ===== NAV ===== */
 .nav {
     display: flex;
     justify-content: center;
@@ -51,9 +48,9 @@ body {
     border-bottom: 1px solid #111;
 }
 
-/* ================= CONTENT ================= */
+/* ===== CONTENT ===== */
 .content {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 80px auto;
     padding: 0 20px;
 }
@@ -61,104 +58,119 @@ body {
 .content h2 {
     font-family: 'Libre Baskerville', serif;
     font-size: 34px;
-    margin-bottom: 50px;
-    text-align: center;
+    margin-bottom: 60px;
 }
 
-/* ================= JOURNEY – STORY ================= */
+/* ===== TIMELINE ===== */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
 
-/* Carte */
-.journey-item {
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: #ddd;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+}
+
+/* LEFT / RIGHT */
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+/* DOT */
+.timeline-dot {
+    position: absolute;
+    top: 32px;
+    width: 12px;
+    height: 12px;
+    background: #111;
+    border-radius: 50%;
+}
+
+.timeline-item.left .timeline-dot {
+    right: -6px;
+}
+
+.timeline-item.right .timeline-dot {
+    left: -6px;
+}
+
+/* BOX */
+.timeline-content {
     border: 1px solid #ddd;
-    margin-bottom: 28px;
-    transition: background 0.3s ease;
-}
-
-/* Zone cliquable */
-.journey-item summary {
-    list-style: none;
+    padding: 20px;
+    background: white;
     cursor: pointer;
-    padding: 26px 30px;
+    transition: transform 0.2s ease;
 }
 
-.journey-item summary::-webkit-details-marker {
-    display: none;
+.timeline-content:hover {
+    transform: translateY(-2px);
 }
 
-/* Année */
-.journey-item .year {
-    display: block;
-    font-size: 13px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #999;
-    margin-bottom: 10px;
-}
-
-/* Titre */
-.journey-item summary strong {
-    display: block;
+.timeline-content h3 {
     font-family: 'Libre Baskerville', serif;
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 8px;
 }
 
-/* Texte court */
-.journey-item summary p {
+/* PREVIEW */
+.timeline-preview {
     font-size: 15px;
-    color: #444;
-    line-height: 1.5;
+    margin-top: 10px;
+    color: #555;
 }
 
-/* Détail (au clic) */
-.journey-detail {
-    padding: 0 30px 30px;
-    animation: fadeIn 0.4s ease;
-}
-
-.journey-detail p {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 14px;
-}
-
-/* Carte ouverte */
-.journey-item[open] {
+/* DETAIL */
+.timeline-detail {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
     background: #fafafa;
+    border: 1px solid #ddd;
 }
 
-/* Animation douce */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-4px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* OPEN STATE */
+.timeline-item.open .timeline-detail {
+    display: block;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
 
-    .name {
-        font-size: 32px;
-        letter-spacing: 0.12em;
+    .timeline::before {
+        left: 20px;
     }
 
-    .nav {
-        gap: 20px;
-        flex-wrap: wrap;
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 60px;
+        text-align: left;
+        margin-bottom: 50px;
     }
 
-    .content h2 {
-        font-size: 28px;
-    }
-
-    .journey-item summary {
-        padding: 22px;
+    .timeline-dot {
+        left: 14px;
     }
 }
-
 
