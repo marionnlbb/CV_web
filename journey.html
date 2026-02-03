@@ -25,229 +25,157 @@
     </nav>
 </header>
 
-<section class="content journey">
-
+<section class="content">
     <h2>My Journey</h2>
 
-    <!-- ENCADRÉ 1 -->
-    <details class="journey-card">
-        <summary>
-            <span class="journey-year">2018 – High School</span>
-            <h3>A first encounter with engineering</h3>
-            <p class="journey-preview">
-                A visit to the Paris Air Show sparked my interest in engineering through inspiring encounters with women engineers.
-            </p>
-        </summary>
+    <div class="timeline">
 
-        <div class="journey-detail">
-            <p>
-                During a school visit to the Paris Air Show (Le Bourget) with the association <em>Elles Bougent</em>,
-                I discovered the engineering world through inspiring encounters with women engineers.
+        <!-- ENCADRÉ 1 -->
+        <div class="timeline-item left">
+            <span class="timeline-dot"></span>
+
+            <div class="timeline-content" onclick="toggleItem(this)">
+                <h3>2018 – High School</h3>
+                <strong>A first encounter with engineering</strong>
+            </div>
+
+            <p class="timeline-preview">
+                A visit to the Paris Air Show sparked my interest in engineering.
             </p>
-            <p>
-                This day was a real turning point: for the first time, I could picture myself in a technical,
-                demanding and meaningful profession.
-            </p>
-            <p>
-                From that moment on, my objective became clear: deepen my scientific knowledge to understand,
-                design and improve complex systems.
-            </p>
+
+            <div class="timeline-detail">
+                <p>
+                    During a school visit to the Paris Air Show with the association
+                    <em>Elles Bougent</em>, I discovered engineering through inspiring
+                    encounters with women engineers.
+                </p>
+                <p>
+                    This day marked the beginning of my ambition to pursue a technical,
+                    demanding and meaningful career.
+                </p>
+            </div>
         </div>
-    </details>
 
-    <!-- ENCADRÉ 2 -->
-    <details class="journey-card">
-        <summary>
-            <span class="journey-year">2021</span>
-            <h3>Scientific Baccalaureate</h3>
-            <p class="journey-preview">
-                I chose a scientific curriculum to build strong foundations in physics and mathematics.
-            </p>
-        </summary>
+        <!-- ENCADRÉ 2 -->
+        <div class="timeline-item right">
+            <span class="timeline-dot"></span>
 
-        <div class="journey-detail">
-            <p>
-                Motivated by this first spark, I naturally pursued a scientific path and obtained a
-                scientific baccalaureate in 2021.
+            <div class="timeline-content" onclick="toggleItem(this)">
+                <h3>2021</h3>
+                <strong>Scientific Baccalaureate</strong>
+            </div>
+
+            <p class="timeline-preview">
+                Building strong foundations in physics and mathematics.
             </p>
-            <p>
-                This choice already reflected my attraction to understanding physical phenomena and
-                intellectually demanding disciplines.
-            </p>
+
+            <div class="timeline-detail">
+                <p>
+                    Motivated by my early interest in engineering, I pursued a scientific
+                    curriculum and obtained my baccalaureate in 2021.
+                </p>
+            </div>
         </div>
-    </details>
 
-    <!-- ENCADRÉ 3 -->
-    <details class="journey-card">
-        <summary>
-            <span class="journey-year">2021 – 2024</span>
-            <h3>Operational Reserve – French Air Force</h3>
-            <p class="journey-preview">
-                A three-year commitment combining discipline, service and responsibility.
-            </p>
-        </summary>
+        <!-- ENCADRÉ 3 -->
+        <div class="timeline-item left">
+            <span class="timeline-dot"></span>
 
-        <div class="journey-detail">
-            <p>
-                From July 2021, alongside my studies, I joined the operational reserve of the French Air Force
-                on the Creil air base, driven by a desire to be useful and committed.
+            <div class="timeline-content" onclick="toggleItem(this)">
+                <h3>2021 – 2024</h3>
+                <strong>Operational Reserve – French Air Force</strong>
+            </div>
+
+            <p class="timeline-preview">
+                A three-year commitment combining discipline and responsibility.
             </p>
-            <p>
-                I held several roles: supervision of reservist training (CIRAA), participation in military
-                training courses (combat, shooting, cohesion), and later integration into the Human Resources
-                Office, specifically the Chancellery Bureau.
-            </p>
-            <p>
-                I was responsible for editing evaluation reports and diplomas, as well as archive management
-                and classification, developing rigor, reliability and a strong sense of responsibility.
-            </p>
+
+            <div class="timeline-detail">
+                <p>
+                    Alongside my studies, I joined the operational reserve of the French
+                    Air Force on the Creil air base.
+                </p>
+                <p>
+                    I worked in training supervision, military courses, and later in
+                    Human Resources, where rigor and organization were essential.
+                </p>
+            </div>
         </div>
-    </details>
 
-    <!-- ENCADRÉ 4 -->
-    <details class="journey-card">
-        <summary>
-            <span class="journey-year">2025 – Today</span>
-            <h3>Operational Reserve – National Gendarmerie</h3>
-            <p class="journey-preview">
-                Continuing to serve, closer to the population.
-            </p>
-        </summary>
+        <!-- ENCADRÉ 4 -->
+        <div class="timeline-item right">
+            <span class="timeline-dot"></span>
 
-        <div class="journey-detail">
-            <p>
-                In 2025, after moving to Nantes, I could no longer continue my engagement in Creil.
-                Wanting to remain committed while being closer to the population, I joined the
-                operational reserve of the National Gendarmerie.
-            </p>
-            <p>
-                After completing the required training blocks, I now serve as a brigadier-chief,
-                reinforcing local units during specific missions, often at night, which I find
-                particularly formative.
-            </p>
-        </div>
-    </details>
+            <div class="timeline-content" onclick="toggleItem(this)">
+                <h3>2021 – 2023</h3>
+                <strong>Preparatory Class & University Path</strong>
+            </div>
 
-    <!-- ENCADRÉ 5 -->
-    <details class="journey-card">
-        <summary>
-            <span class="journey-year">2021 – 2023</span>
-            <h3>Preparatory Class & University Path</h3>
-            <p class="journey-preview">
+            <p class="timeline-preview">
                 Exploring science through multiple academic paths.
             </p>
-        </summary>
 
-        <div class="journey-detail">
-            <p>
-                I began with a MPSI preparatory class in Autun, attracted by both scientific rigor and sport.
-                This demanding experience allowed me to push my limits.
-            </p>
-            <p>
-                Seeking more industrial sciences, I then pursued a reinforced degree in mechanics at
-                Paul Sabatier University (Toulouse), studying electromagnetism, optics, solid and fluid mechanics.
-            </p>
-            <p>
-                After returning north for family reasons, I completed a third year in Energy and Materials
-                in Amiens, focusing on energy conversion, power electronics and materials characterization.
-            </p>
+            <div class="timeline-detail">
+                <p>
+                    I studied in a MPSI preparatory class, then continued at university
+                    in mechanics, energy systems and materials science.
+                </p>
+            </div>
         </div>
-    </details>
 
-    <!-- ENCADRÉ 6 -->
-    <details class="journey-card">
-        <summary>
-            <span class="journey-year">2023 – Today</span>
-            <h3>Engineering Degree – IMT Atlantique</h3>
-            <p class="journey-preview">
+        <!-- ENCADRÉ 5 -->
+        <div class="timeline-item left">
+            <span class="timeline-dot"></span>
+
+            <div class="timeline-content" onclick="toggleItem(this)">
+                <h3>2023 – Today</h3>
+                <strong>Engineering Degree – IMT Atlantique</strong>
+            </div>
+
+            <p class="timeline-preview">
                 Choosing engineering to broaden perspectives and impact.
             </p>
-        </summary>
 
-        <div class="journey-detail">
-            <p>
-                Wanting an internationally oriented and system-level engineering education, I joined
-                IMT Atlantique, recognized for its expertise in energy.
-            </p>
-            <p>
-                In my second year, I chose the nuclear energy specialization, studying reactor operation,
-                fuel cycles, waste treatment, propulsion systems, Monte Carlo modeling and human factors.
-            </p>
-            <p>
-                What particularly stood out to me was the link between irradiated materials, recycling
-                and sustainability.
-            </p>
+            <div class="timeline-detail">
+                <p>
+                    I joined IMT Atlantique to gain a systemic vision of energy systems.
+                    I later specialized in nuclear energy, focusing on reactors, fuel
+                    cycles and sustainability challenges.
+                </p>
+            </div>
         </div>
-    </details>
 
-    <!-- ENCADRÉ 7 -->
-    <details class="journey-card">
-        <summary>
-            <span class="journey-year">2024</span>
-            <h3>Mechanical Internship – Sax’Auto Garage</h3>
-            <p class="journey-preview">
-                Discovering industry from the ground up.
-            </p>
-        </summary>
+        <!-- ENCADRÉ 6 -->
+        <div class="timeline-item right">
+            <span class="timeline-dot"></span>
 
-        <div class="journey-detail">
-            <p>
-                During my end-of-year internship, I worked as a mechanic in an automotive garage,
-                carrying out maintenance tasks, basic repairs, and participating in engine assembly
-                and disassembly.
-            </p>
-            <p>
-                This immersion revealed the environmental limits of certain industrial practices
-                and strengthened my desire to contribute to a more responsible industry.
-            </p>
-        </div>
-    </details>
+            <div class="timeline-content" onclick="toggleItem(this)">
+                <h3>Looking Ahead</h3>
+                <strong>Towards sustainable energy systems</strong>
+            </div>
 
-    <!-- ENCADRÉ 8 -->
-    <details class="journey-card">
-        <summary>
-            <span class="journey-year">Since 2023</span>
-            <h3>Engagements & Knowledge Sharing</h3>
-            <p class="journey-preview">
-                Sharing knowledge and leading collective projects.
-            </p>
-        </summary>
-
-        <div class="journey-detail">
-            <p>
-                Since my L3, I have been giving private tutoring from middle school to undergraduate level.
-                I also served as treasurer for student associations, supervising 13 organizations and managing
-                large-scale budgets and events.
-            </p>
-            <p>
-                These experiences strengthened my leadership, project coordination and financial management skills.
-            </p>
-        </div>
-    </details>
-
-    <!-- FINAL -->
-    <details class="journey-card">
-        <summary>
-            <span class="journey-year">Looking Ahead</span>
-            <h3>Towards Sustainable Energy Systems</h3>
-            <p class="journey-preview">
+            <p class="timeline-preview">
                 Combining energy, materials and environmental responsibility.
             </p>
-        </summary>
 
-        <div class="journey-detail">
-            <p>
-                In the long term, I aim to work in fields related to life cycle assessment (LCA),
-                energy systems and materials, contributing to environmental transition.
-            </p>
-            <p>
-                My objective is to reconcile technological performance, industrial constraints
-                and societal challenges to build sustainable energy systems.
-            </p>
+            <div class="timeline-detail">
+                <p>
+                    My goal is to work at the intersection of energy systems, materials
+                    science and environmental transition, contributing to responsible
+                    and durable solutions.
+                </p>
+            </div>
         </div>
-    </details>
 
+    </div>
 </section>
+
+<script>
+function toggleItem(element) {
+    const item = element.closest(".timeline-item");
+    item.classList.toggle("open");
+}
+</script>
 
 </body>
 </html>
