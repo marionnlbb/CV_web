@@ -473,6 +473,13 @@ body {
     border-radius: 4px;
     margin-bottom: 18px;
 }
+.hobby-carde img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;   
+    background: #f8f8f8;   
+}
+
 
 /* TITRE */
 .hobby-card h3 {
