@@ -352,9 +352,14 @@ body {
 }
 
 .skill-icon {
-    width: 110px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 120px; /* ou la taille que tu veux */
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
 }
+
 
 .skill-block h3 {
     font-size: 1.3rem;
