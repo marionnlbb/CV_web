@@ -25,6 +25,23 @@ body {
     text-transform: uppercase;
     margin-bottom: 40px;
 }
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.lang-btn {
+    font-size: 22px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.lang-btn:hover {
+    transform: scale(1.2);
+}
 
 /* ===== NAV ===== */
 .nav {
