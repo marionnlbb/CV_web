@@ -183,7 +183,7 @@ body {
 }
 
 .timeline-item:hover .timeline-detail {
-    max-height: 1000px; /* augmente si ton texte est long */
+    max-height: 1700px; /* augmente si ton texte est long */
     opacity: 1;
 }
 
@@ -208,6 +208,13 @@ body {
     transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
+.timeline-content,
+.timeline-preview,
+.timeline-content h3,
+.timeline-content strong {
+    opacity: 1 !important;
+    max-height: none !important;
+}
 
 /* OPEN STATE */
 .timeline-item.open .timeline-detail {
