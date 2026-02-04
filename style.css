@@ -142,6 +142,8 @@ body {
     position: relative;
     width: 50%;
     padding: 20px 40px;
+    cursor: pointer; 
+    transition: transform 0.2s ease; }
 }
 
 /* LEFT / RIGHT */
