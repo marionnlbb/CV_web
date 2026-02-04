@@ -179,19 +179,13 @@ body {
 .timeline-content {
     max-height: 0;
     overflow: hidden;
-    opacity: 0;
+    opacity: 1;
     transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
-
-.timeline-item:hover .timeline-content {
-    max-height: 500px; /* ajuste si besoin */
+.timeline-item:hover .timeline-detail {
+    max-height: 500px; /* augmente si ton texte est long */
     opacity: 1;
-}
-.timeline-date, 
-.timeline-title, 
-.timeline-subtitle { 
-    opacity: 1 !important;
 }
 
 .timeline-content h3 {
@@ -209,12 +203,12 @@ body {
 
 /* DETAIL */
 .timeline-detail {
-    display: none;
-    margin-top: 20px;
-    padding: 20px;
-    background: #fafafa;
-    border: 1px solid #ddd;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
 }
+
 
 /* OPEN STATE */
 .timeline-item.open .timeline-detail {
