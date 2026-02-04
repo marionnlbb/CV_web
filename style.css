@@ -175,16 +175,19 @@ body {
 
 /* BOX */
 .timeline-content {
-    border: 1px solid #ddd;
-    padding: 20px;
-    background: white;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
-.timeline-content:hover {
-    transform: translateY(-2px);
+
+.timeline-item:hover .timeline-content {
+    max-height: 500px; /* ajuste si besoin */
+    opacity: 1;
+    transform: translateX(5px);
 }
+
 
 .timeline-content h3 {
     font-family: 'Libre Baskerville', serif;
