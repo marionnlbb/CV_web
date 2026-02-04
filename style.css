@@ -342,8 +342,8 @@ body {
 .skills-two-columns {
     display: flex;
     justify-content: center;
-    gap: 120px;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 60px;
 }
 
 .skill-block {
@@ -352,7 +352,7 @@ body {
 }
 
 .skill-icon {
-    width: 120px;
+    width: 110px;
     margin-bottom: 10px;
 }
 
@@ -369,6 +369,12 @@ body {
     padding-left: 20px;
     font-size: 0.95rem;
     line-height: 1.4rem;
+}
+/* TRAIT VERTICAL */ 
+.skills-divider { 
+    width: 2px; 
+    background-color: #ccc; 
+    height: 260px; 
 }
 
 /* Responsive */
