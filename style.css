@@ -334,40 +334,35 @@ body {
     font-style: italic;
     color: #555;
 }
-.skills-box {
-    border: 1px solid #ddd;
-    padding: 28px;
-    background: #fafafa;
-    max-width: 320px;
-}
-
-.skills-box h3 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
 .skills-section {
-    margin-bottom: 24px;
+    margin-top: 60px;
 }
 
-.skills-section h4 {
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #666;
-    margin-bottom: 12px;
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
 }
 
-.skills-section ul {
-    list-style: none;
-    padding: 0;
+.icon-container {
+    position: relative;
+    width: 180px;
 }
 
-.skills-section li {
-    font-size: 14px;
-    margin-bottom: 6px;
-    color: #333;
+.icon-container svg {
+    width: 100%;
+}
+
+.icon-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1.1rem;
+    width: 70%;
 }
 
 
