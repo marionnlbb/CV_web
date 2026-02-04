@@ -179,12 +179,11 @@ body {
 .timeline-content {
     max-height: 0;
     overflow: hidden;
-    opacity: 1;
     transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
 .timeline-item:hover .timeline-detail {
-    max-height: 500px; /* augmente si ton texte est long */
+    max-height: 1000px; /* augmente si ton texte est long */
     opacity: 1;
 }
 
