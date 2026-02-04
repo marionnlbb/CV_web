@@ -185,9 +185,8 @@ body {
 
 
 .timeline-item:hover .timeline-content {
-    max-height: 500px; /* ajuste si besoin */
+    max-height: 1000px; /* ajuste si besoin */
     opacity: 1;
-    transform: translateX(5px);
 }
 
 
