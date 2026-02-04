@@ -429,7 +429,8 @@ body {
 
 .hobbies h2 {
     font-family: 'Libre Baskerville', serif;
-    font-size: 32px;
+    font-size: 26px;
+    font-weight: 400;
     margin-bottom: 60px;
 }
 
