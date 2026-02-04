@@ -505,6 +505,36 @@ body {
     margin: 0 0 60px 0;
     color: #222;
 }
+--- contact ----
+.contact-card {
+    background: #f7f7f7;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 420px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: 20px;
+}
+
+.contact-card p {
+    margin-bottom: 18px;
+    font-size: 1rem;
+}
+
+.contact-card a {
+    color: #0047ab;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
 
 
 /* ANIMATION */
