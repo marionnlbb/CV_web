@@ -425,4 +425,81 @@ body {
         overflow-x: auto;
     }
 }
+/* ===== HOBBIES ===== */
+
+.hobbies h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+/* CAROUSEL */
+.hobby-carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+/* TRACK */
+.hobby-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scrollHobbies 35s linear infinite;
+}
+
+/* CARD */
+.hobby-card {
+    min-width: 260px;
+    max-width: 260px;
+    padding: 30px 24px;
+    border: 1px solid #ddd;
+    background: white;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.hobby-icon {
+    font-size: 34px;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.hobby-card h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.hobby-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* CLONES DISCRETS */
+.hobby-card.clone {
+    opacity: 0.4;
+}
+
+/* ANIMATION */
+@keyframes scrollHobbies {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* PAUSE AU SURVOL */
+.hobby-carousel:hover .hobby-track {
+    animation-play-state: paused;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hobby-card {
+        min-width: 220px;
+    }
+}
 
