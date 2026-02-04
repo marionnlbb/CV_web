@@ -506,36 +506,41 @@ body {
     color: #222;
 }
 --- contact ----
-.contact-card {
-    background: #f7f7f7;
-    padding: 25px;
-    border-radius: 12px;
-    max-width: 420px;
+.contact-box {
+    background: #ffffff;
     border: 1px solid #ddd;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-top: 20px;
+    border-radius: 14px;
+    padding: 25px;
+    max-width: 480px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    margin-top: 25px;
 }
 
-.contact-card p {
-    margin-bottom: 18px;
-    font-size: 1rem;
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
 }
 
-.contact-card a {
+.contact-item svg {
+    flex-shrink: 0;
+}
+
+.contact-item a {
     color: #0047ab;
     text-decoration: none;
 }
 
-.contact-card a:hover {
+.contact-item a:hover {
     text-decoration: underline;
 }
 
 .contact-intro {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-bottom: 20px;
     font-style: italic;
 }
-
 
 /* ANIMATION */
 @keyframes hobbyScroll {
