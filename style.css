@@ -149,12 +149,12 @@ body {
 /* LEFT / RIGHT */
 .timeline-item.left {
     left: 0;
-    text-align: left;
+    text-align: right;
 }
 
 .timeline-item.right {
     left: 50%;
-    text-align: right;
+    text-align: left;
 }
 
 /* DOT */
