@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Marion Lebeau | Mi Trayectoria</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-header">
+    <h1 class="name">MARION LEBEAU</h1>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-link">Sobre mí</a>
+        <a href="journey_es.html" class="nav-link active">Mi Trayectoria</a>
+        <a href="projects.html" class="nav-link">Proyectos</a>
+        <a href="hobbies.html" class="nav-link">Aficiones</a>
+    </nav>
+</header>
+
+<section class="content">
+    <p class="hobbies-intro">
+        Mi trayectoria se ha construido paso a paso: explora cada fecha para saber más.
+    </p>
+
+    <div class="timeline">
+
+        <!-- ENCADRÉ 1 -->
+        <div class="timeline-item left">
+            <span class="timeline-dot"></span>
+
+            <div class="timeline-content" onclick="toggleItem(this)">
+                <h3>2018 – Bachillerato</h3>
+                <strong>Un primer encuentro con la ingeniería</strong>
+            </div>
+
+            <p class="timeline-preview">
+                “Esta visita no solo me enseñó qué era la ingeniería, me mostró que yo podía formar parte de ella.”
+            </p>
+
+            <div class="timeline-detail">
+                <p>
+                    Durante mi último año de bachillerato, tuve la oportunidad de visitar el Salón Aeronáutico
+                    de París en Le Bourget con la asociación <strong>Elles Bougent</strong>. No esperaba gran cosa
+                    de una excursión escolar… pero acabó cambiando mucho más de lo que imaginaba.
+                </p>
+                <p>
+                    A lo largo del día, hablé con mujeres ingenieras de campos técnicos muy diversos.
+                    Sus trayectorias, su pasión y la forma en que describían su trabajo abrieron una puerta
+                    que hasta entonces no había considerado realmente.
+                </p>
+                <p>
+                    Por primera vez, pude imaginarme de verdad en una carrera técnica que combinara rigor,
+                    creatividad e impacto real. Aquella visita fue un auténtico punto de inflexión.
+                </p>
+                <p>
+                    Comprendí que la ingeniería no se limita a la tecnología o a las máquinas,
+                    sino que es una forma de contribuir de manera significativa a la sociedad,
+                    diseñando, mejorando y comprendiendo sistemas complejos.
+                </p>
+                <img 
+                    src="ellesboogent.jpeg" 
+                    alt="Visita al Salón Aeronáutico de París con Elles Bougent"
+                    class="journey-image"
+                >    
+            </div>
+        </div>
+
+        <!-- ENCADRÉ 2 -->
+        <div class="timeline-item right">
+            <span class="timeline-dot"></span>
+
+            <div class="timeline-content" onclick="toggleItem(this)">
+                <h3>2021 – Elegir la ciencia</h3>
+            </div>
+
+            <p class="timeline-preview">
+                “El bachillerato científico fue, para mí, el primer paso hacia la ingeniería.”
+            </p>
+
+            <div class="timeline-detail">
+                <p>
+                    A partir de esta primera inmersión en el mundo de la ingeniería,
+                    decidí seguir un itinerario científico en el instituto.
+                    Elegí Física-Química, Matemáticas y Ciencias de la Ingeniería
+                    como asignaturas principales, junto con la opción de Matemáticas Avanzadas,
+                    para reforzar las bases necesarias para continuar en esta dirección.
+                </p>
+            </div>
+        </div>
+
+        <!-- ENCADRÉ 3 -->
+        <div class="timeline-item left">
+            <span class="timeline-dot"></span>
+
+            <div class="timeline-content" onclick="toggleItem(this)">
+                <h3>De 2021 a 2025 – Aprender a través del servicio</h3>
+            </div>
+
+            <p class="timeline-preview">
+                “Servir en la reserva significó elegir actuar en lugar de permanecer como espectadora.”
+            </p>
+
+            <div class="timeline-detail">
+                <p>
+                    En julio de 2021, paralelamente a mis estudios académicos,
+                    me incorporé a la reserva operativa de la Fuerza Aérea francesa
+                    en la base aérea de Creil.
+                </p>
+                <p>
+                    Durante este compromiso de tres años, desempeñé varios puestos
+                    que combinaban responsabilidades operativas, organizativas y administrativas.
+                </p>
+                <p>
+                    Participé en la Operación Sentinelle durante los Juegos Olímpicos,
+                    formando parte de equipos responsables de la seguridad aérea de París,
+                    en un entorno de alta responsabilidad que exigía vigilancia constante
+                    y una estricta coordinación.
+                </p>
+                <p>
+                    Posteriormente, trabajé en la Oficina de Recursos Humanos,
+                    dentro del área de Cancillería, gestionando tareas administrativas
+                    que requerían un alto nivel de rigor y confidencialidad.
+                </p>
+                <p>
+                    Esta experiencia reforzó significativamente mi sentido de la responsabilidad,
+                    mi atención al detalle y mi capacidad para evolucionar en entornos exigentes
+                    y altamente estructurados.
+                </p>
+                <img 
+                    src="AAE1.jpeg" 
+                    alt="Participación en una ceremonia en Les Invalides"
+                    class="journey-image"
+                > 
+            </div>
+        </div>
+
+        <!-- ENCADRÉ 4 -->
+        <div class="timeline-item right">
+            <span class="timeline-dot"></span>
+
+            <div class="timeline-content" onclick="toggleItem(this)">
+                <h3>2021–2023 – Explorar para comprender mejor</h3>
+            </div>
+
+            <p class="timeline-preview">
+                “Probar, ajustar y afinar mi orientación.”
+            </p>
+
+            <div class="timeline-detail">
+                <div class="journey-section">
+                    <h4>Autun — Clase preparatoria MPSI</h4>
+                    <p>
+                        Comencé mis estudios superiores en una <strong>clase preparatoria MPSI</strong> en Autun,
+                        atraída por el rigor científico y el desafío intelectual.
+                    </p>
+                    <p>
+                        Esta experiencia me llevó a mis límites,
+                        pero también me hizo darme cuenta de que necesitaba
+                        unas <strong>ciencias más aplicadas e industriales</strong>.
+                    </p>
+                </div>
+
+                <div class="journey-section">
+                    <h4>Toulouse — L2 Mecánica (Universidad Paul Sabatier)</h4>
+                    <p>
+                        Continué con un programa universitario reforzado en mecánica,
+                        abordando las ciencias de la ingeniería desde un enfoque más teórico.
+                    </p>
+                    <ul class="journey-list">
+                        <li><strong>Electromagnetismo</strong></li>
+                        <li><strong>Óptica</strong></li>
+                        <li><strong>Mecánica de partículas</strong></li>
+                        <li><strong>Mecánica de sólidos</strong></li>
+                        <li><strong>Mecánica de fluidos</strong></li>
+                    </ul>
+                </div>
+
+                <div class="journey-section">
+                    <h4>Amiens — L3 Energía y Materiales (Universidad de Picardía Jules Verne)</h4>
+                    <p>
+                        Finalicé mi tercer año en el ámbito de
+                        <strong>Energía y Materiales</strong>.
+                    </p>
+                    <p class="journey-conclusion">
+                        Este año confirmó mi interés por los materiales,
+                        el trabajo de laboratorio y la relación entre energía y materia.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ENCADRÉ FINAL -->
+        <div class="timeline-item left">
+            <span class="timeline-dot"></span>
+
+            <div class="timeline-content" onclick="toggleItem(this)">
+                <h3>Mirando al futuro</h3>
+            </div>
+
+            <p class="timeline-preview">
+                “Diseñar sistemas energéticos sostenibles.”
+            </p>
+
+            <div class="timeline-detail">
+                <p>
+                    Mi ambición es trabajar en la intersección entre
+                    <strong>energía</strong>, <strong>materiales</strong>
+                    y <strong>transición medioambiental</strong>,
+                    en particular a través del análisis del ciclo de vida.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+function toggleItem(element) {
+    const item = element.closest(".timeline-item");
+    item.classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
 
