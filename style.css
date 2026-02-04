@@ -185,10 +185,14 @@ body {
 
 
 .timeline-item:hover .timeline-content {
-    max-height: 1000px; /* ajuste si besoin */
+    max-height: 500px; /* ajuste si besoin */
     opacity: 1;
 }
-
+.timeline-date, 
+.timeline-title, 
+.timeline-subtitle { 
+    opacity: 1 !important;
+}
 
 .timeline-content h3 {
     font-family: 'Libre Baskerville', serif;
