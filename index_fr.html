@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Marion Lebeau | À propos de moi</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function showCV(lang) {
+            const frame = document.getElementById("cv-frame");
+            const buttons = document.querySelectorAll(".cv-btn");
+
+            buttons.forEach(b => b.classList.remove("active"));
+
+            if (lang === "en") {
+                frame.src = "CV_English_LEBEAU.pdf";
+                buttons[0].classList.add("active");
+            } else if (lang === "fr") {
+                frame.src = "CV_en_français.pdf";
+                buttons[1].classList.add("active");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<header class="top-header">
+    <div class="language-switch">
+        <a href="index_fr.html" class="lang-btn">🇫🇷</a>
+        <a href="index.html" class="lang-btn">🇬🇧</a>
+        <a href="index_es.html" class="lang-btn">🇪🇸</a>
+    </div>
+
+    <h1 class="name">MARION LEBEAU</h1>
+
+    <nav class="nav">
+        <a href="index_fr.html" class="nav-link active">À propos</a>
+        <a href="journey_fr.html" class="nav-link">Mon parcours</a>
+        <a href="projects_fr.html" class="nav-link">Projets</a>
+        <a href="hobbies_fr.html" class="nav-link">Loisirs</a>
+    </nav>
+</header>
+
+<section class="content about-me">
+
+<div class="about-wrapper">
+
+    <!-- PHOTO -->
+    <div class="about-photo-wrapper">
+        <img src="photo.jpg" class="about-photo" alt="Portrait de Marion Lebeau">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="about-text">
+        <h2>Pourquoi ce site web ?</h2>
+
+        <p>
+            Un CV résume des expériences, mais raconte rarement une histoire.
+            Ce site a été créé pour donner de la place à cette histoire : les choix,
+            les rencontres et les engagements qui ont façonné mon parcours au‑delà d’une seule page.
+        </p>
+
+        <p>
+            Je suis actuellement élève ingénieure en deuxième année à IMT Atlantique,
+            sur le campus de Nantes. Au fil de mes études, j’ai développé un fort intérêt
+            pour les systèmes énergétiques et les sciences physiques, motivée par l’envie
+            de comprendre comment les technologies complexes interagissent avec la société
+            et l’environnement.
+        </p>
+
+        <p>
+            Cette curiosité m’a conduite à me spécialiser dans l’énergie nucléaire,
+            un domaine exigeant et souvent mal compris, que je considère comme un levier
+            essentiel pour l’avenir de la production énergétique. Aujourd’hui, mon ambition
+            est de combiner expertise technique et responsabilité environnementale afin de
+            contribuer à des systèmes énergétiques plus durables.
+        </p>
+    </div>
+
+</div>
+
+    <!-- SWITCH CV -->
+    <div class="cv-switch">
+        <button class="cv-btn" onclick="showCV('en')">CV Anglais</button>
+        <button class="cv-btn active" onclick="showCV('fr')">CV Français</button>
+    </div>
+
+    <!-- PDF -->
+    <div class="cv-viewer">
+        <iframe
+            id="cv-frame"
+            src="CV_en_français.pdf"
+            loading="lazy">
+        </iframe>
+    </div>
+
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+
+        <a href="mailto:marion.lebeau@imt-atlantique.net" class="footer-link">
+            <!-- Email SVG -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 
+                21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 
+                2.9 4 4 4Z" stroke="#ffffff" stroke-width="2" 
+                stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 6L12 13L2 6" stroke="#ffffff" 
+                stroke-width="2" stroke-linecap="round" 
+                stroke-linejoin="round"/>
+            </svg>
+            marion.lebeau@imt-atlantique.net
+        </a>
+
+        <a href="https://www.linkedin.com/in/marion-lebeau02" target="_blank" class="footer-link">
+            <!-- LinkedIn SVG -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff">
+                <path d="M4.98 3.5C4.98 4.60457 4.08457 5.5 
+                2.98 5.5C1.87543 5.5 0.98 4.60457 0.98 
+                3.5C0.98 2.39543 1.87543 1.5 2.98 
+                1.5C4.08457 1.5 4.98 2.39543 4.98 3.5Z"/>
+                <path d="M0.98 8H4.98V22H0.98V8Z"/>
+                <path d="M8.98 8H12.74V10.02H12.8C13.32 9.02 
+                14.72 7.96 16.78 7.96C21.02 7.96 22 10.64 
+                22 14.28V22H18V15.2C18 13.36 17.96 11.04 
+                15.5 11.04C13 11.04 12.64 13.04 12.64 
+                15.08V22H8.98V8Z"/>
+            </svg>
+            linkedin.com/in/marion-lebeau02
+        </a>
+
+    </div>
+</footer>
+
+</body>
+</html>
 
