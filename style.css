@@ -478,6 +478,16 @@ body {
         overflow-x: auto;
     }
 }
+/* Responsive */ 
+@media (max-width: 900px) { 
+    .skills-columns {
+        flex-direction: column; 
+        align-items: center; 
+}
+    .skills-divider { 
+        display: none;
+    }
+}
 /* ===== HOBBIES ===== */
 
 .hobbies h2 {
