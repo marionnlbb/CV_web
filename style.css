@@ -267,4 +267,162 @@ body {
     font-style: italic;
     color: #444;
 }
+/* ===== PROJECTS ===== */
+
+.projects {
+    margin-top: 100px;
+}
+
+.projects h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 34px;
+    margin-bottom: 80px;
+}
+
+/* GRID PROJECT */
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+/* ALTERNANCE */
+.project.reverse {
+    direction: rtl;
+}
+.project.reverse > * {
+    direction: ltr;
+}
+
+/* IMAGES */
+.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-images img {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* TEXTE */
+.project-text h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.project-text h4 {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.project-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.project-skills {
+    font-style: italic;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .project {
+        grid-template-columns: 1fr;
+    }
+
+    .project-images {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+}
+/* ===== PROJECTS ===== */
+
+.projects {
+    margin-top: 100px;
+}
+
+.projects h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 34px;
+    margin-bottom: 80px;
+}
+
+/* GRID PROJECT */
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+/* ALTERNANCE */
+.project.reverse {
+    direction: rtl;
+}
+.project.reverse > * {
+    direction: ltr;
+}
+
+/* IMAGES */
+.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-images img {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* TEXTE */
+.project-text h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.project-text h4 {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.project-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.project-skills {
+    font-style: italic;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .project {
+        grid-template-columns: 1fr;
+    }
+
+    .project-images {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+}
 
