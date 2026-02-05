@@ -670,3 +670,9 @@ body {
     line-height: 1.1rem;
     width: 70%;
 }
+.flag-icon {
+    width: 24px;
+    height: auto;
+    display: block;
+}
+
