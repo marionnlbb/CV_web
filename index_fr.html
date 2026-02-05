@@ -15,10 +15,10 @@
             buttons.forEach(b => b.classList.remove("active"));
 
             if (lang === "en") {
-                frame.src = "CV_English_LEBEAU.pdf";
+                frame.src = "CV_en_anglais_cesure.pdf";
                 buttons[0].classList.add("active");
             } else if (lang === "fr") {
-                frame.src = "CV_en_français.pdf";
+                frame.src = "CV_en_français_cesure.pdf";
                 buttons[1].classList.add("active");
             }
         }
@@ -104,7 +104,7 @@
     <div class="cv-viewer">
         <iframe
             id="cv-frame"
-            src="CV_en_français.pdf"
+            src="CV_en_français_cesure.pdf"
             loading="lazy">
         </iframe>
     </div>
