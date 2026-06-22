@@ -675,4 +675,39 @@ body {
     height: auto;
     display: block;
 }
-
+/* ===== STATS BLOCK ===== */
+.stats-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1.5px solid #111;
+    border-bottom: 1.5px solid #111;
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+.stat {
+    padding: 2rem 1.2rem;
+    text-align: center;
+    border-right: 0.5px solid #ddd;
+}
+.stat:last-child { border-right: none; }
+.stat-num {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: #5A7A5A;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.stat-label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #777;
+    line-height: 1.5;
+}
+@media (max-width: 600px) {
+    .stats-wrap { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: none; }
+}
