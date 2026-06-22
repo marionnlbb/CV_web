@@ -564,3 +564,17 @@ body {
     .stats-wrap { grid-template-columns: repeat(2, 1fr); }
     .stat:nth-child(2) { border-right: none; }
 }
+/* ===== BANDEAU STAGE ===== */
+.bandeau-stage {
+    background: #EAF3DE;
+    border-left: 3px solid #5A7A5A;
+    color: #27500A;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+}
+.bandeau-stage strong {
+    font-weight: 600;
+}
