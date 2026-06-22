@@ -62,7 +62,7 @@ body {
 
 .nav-link.active {
     color: #111;
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid #5A7A5A;
 }
 
 /* ===== CONTENT ===== */
@@ -80,32 +80,32 @@ body {
 }
 .about-wrapper {
     display: grid;
-    grid-template-columns: 240px 1fr; /* ← photo plus petite */
+    grid-template-columns: 240px 1fr;
     gap: 50px;
     align-items: start;
 }
 /* ===== ABOUT PHOTO ===== */
 .about-photo {
     width: 100%;
-    max-width: 220px;   /* ← ajuste ici la taille réelle */
+    max-width: 220px;
     height: auto;
     border-radius: 4px;
 }
 .cv-switch {
     display: flex;
-    justify-content: center;   /* ← centre horizontalement */
+    justify-content: center;
     gap: 12px;
     margin: 15px 0 25px;
 }
 .cv-viewer {
     display: flex;
-    justify-content: center;   /* ← centre le PDF */
+    justify-content: center;
     margin-top: 20px;
 }
 
 .cv-viewer iframe {
     width: 100%;
-    max-width: 800px;          /* ← largeur élégante */
+    max-width: 800px;
     height: 900px;
     border: 1px solid #ddd;
 }
@@ -143,8 +143,8 @@ body {
     position: relative;
     width: 50%;
     padding: 20px 40px;
-    cursor: pointer; 
-    transition: transform 0.2s ease; }
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 /* LEFT / RIGHT */
@@ -184,7 +184,7 @@ body {
 }
 
 .timeline-item:hover .timeline-detail {
-    max-height: 1700px; /* augmente si ton texte est long */
+    max-height: 1700px;
     opacity: 1;
 }
 
@@ -225,11 +225,9 @@ body {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-
     .timeline::before {
         left: 20px;
     }
-
     .timeline-item {
         width: 100%;
         left: 0 !important;
@@ -237,7 +235,6 @@ body {
         text-align: left;
         margin-bottom: 50px;
     }
-
     .timeline-dot {
         left: 14px;
     }
@@ -258,56 +255,46 @@ body {
     display: block;
 }
 /* ===== JOURNEY DETAIL CLEAN LAYOUT ===== */
-
 .journey-detail {
     text-align: left;
     line-height: 1.75;
 }
-
 .journey-section {
     margin-bottom: 40px;
 }
-
 .journey-section h4 {
     font-family: 'Libre Baskerville', serif;
     font-size: 18px;
     margin-bottom: 12px;
     color: #111;
 }
-
 .journey-section p {
     font-size: 16px;
     color: #333;
     margin-bottom: 14px;
 }
-
 .journey-list {
     margin: 15px 0 18px 20px;
-    text-align: left
+    text-align: left;
 }
-
 .journey-list li {
     font-size: 15px;
     margin-bottom: 6px;
 }
-
 .journey-conclusion {
     font-style: italic;
     color: #444;
 }
 /* ===== PROJECTS ===== */
-
 .projects {
     margin-top: 100px;
 }
-
 .projects h2 {
     font-family: 'Libre Baskerville', serif;
     font-size: 34px;
     margin-bottom: 80px;
+    color: #5A7A5A;
 }
-
-/* GRID PROJECT */
 .project {
     display: grid;
     grid-template-columns: 1fr 1.4fr 1fr;
@@ -315,36 +302,28 @@ body {
     align-items: center;
     margin-bottom: 120px;
 }
-
-/* ALTERNANCE */
 .project.reverse {
     direction: rtl;
 }
 .project.reverse > * {
     direction: ltr;
 }
-
-/* IMAGES */
 .project-images {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 .project-images img {
     width: 100%;
     border-radius: 4px;
     border: 1px solid #ddd;
 }
-
-/* TEXTE */
 .project-text h3 {
     font-family: 'Libre Baskerville', serif;
     font-size: 24px;
     margin-bottom: 6px;
     color: #5A7A5A;
 }
-
 .project-text h4 {
     font-size: 13px;
     letter-spacing: 0.12em;
@@ -352,13 +331,11 @@ body {
     color: #777;
     margin-bottom: 25px;
 }
-
 .project-text p {
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 18px;
 }
-
 .project-skills {
     font-style: italic;
     color: #555;
@@ -367,35 +344,29 @@ body {
     margin-top: 60px;
     padding: 40px 0;
 }
-
 .skills-two-columns {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 60px;
 }
-
 .skill-block {
     text-align: center;
     max-width: 260px;
 }
-
 .skill-icon {
     width: 90px;
     height: 90px;
-    max-width: 120px; /* ou la taille que tu veux */
+    max-width: 120px;
     object-fit: contain;
     display: block;
     margin: 0 auto 12px;
 }
-
-
 .skill-block h3 {
     font-size: 1.3rem;
     margin-bottom: 12px;
     color: #0047ab;
 }
-
 .skill-block ul {
     list-style: disc;
     text-align: left;
@@ -404,14 +375,11 @@ body {
     font-size: 0.95rem;
     line-height: 1.4rem;
 }
-/* TRAIT VERTICAL */ 
-.skills-divider { 
-    width: 2px; 
-    background-color: #ccc; 
-    height: 420px; 
+.skills-divider {
+    width: 2px;
+    background-color: #ccc;
+    height: 420px;
 }
-
-/* Responsive */
 @media (max-width: 800px) {
     .skills-two-columns {
         flex-direction: column;
@@ -419,139 +387,45 @@ body {
         gap: 40px;
     }
 }
-
-
-
-/* RESPONSIVE */
 @media (max-width: 1000px) {
     .project {
         grid-template-columns: 1fr;
     }
-
     .project-images {
         flex-direction: row;
         overflow-x: auto;
     }
 }
-/* ===== PROJECTS ===== */
-
-.projects {
-    margin-top: 100px;
-}
-
-.projects h2 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 34px;
-    margin-bottom: 80px;
-}
-
-/* GRID PROJECT */
-.project {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr 1fr;
-    gap: 40px;
-    align-items: center;
-    margin-bottom: 120px;
-}
-
-/* ALTERNANCE */
-.project.reverse {
-    direction: rtl;
-}
-.project.reverse > * {
-    direction: ltr;
-}
-
-/* IMAGES */
-.project-images {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.project-images img {
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
-
-/* TEXTE */
-.project-text h3 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 24px;
-    margin-bottom: 6px;
-}
-
-.project-text h4 {
-    font-size: 13px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #777;
-    margin-bottom: 25px;
-}
-
-.project-text p {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 18px;
-}
-
-.project-skills {
-    font-style: italic;
-    color: #555;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1000px) {
-    .project {
-        grid-template-columns: 1fr;
-    }
-
-    .project-images {
-        flex-direction: row;
-        overflow-x: auto;
-    }
-}
-/* Responsive */ 
-@media (max-width: 900px) { 
+@media (max-width: 900px) {
     .skills-columns {
-        flex-direction: column; 
-        align-items: center; 
-}
-    .skills-divider { 
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills-divider {
         display: none;
     }
 }
 /* ===== HOBBIES ===== */
-
 .hobbies h2 {
     font-family: 'Libre Baskerville', serif;
     font-size: 26px;
     font-weight: 400;
     margin-bottom: 60px;
 }
-
-/* CAROUSEL */
 .hobby-carousel {
     overflow: hidden;
     position: relative;
     width: 100%;
 }
-
-/* TRACK */
 .hobby-track {
     display: flex;
     gap: 30px;
     width: max-content;
     animation: hobbyScroll 40s linear infinite;
 }
-
-/* STOP AU SURVOL */
 .hobby-carousel:hover .hobby-track {
     animation-play-state: paused;
 }
-
-/* CARD */
 .hobby-card {
     width: 280px;
     flex-shrink: 0;
@@ -561,8 +435,6 @@ body {
     border-radius: 6px;
     text-align: center;
 }
-
-/* IMAGE */
 .hobby-card img {
     width: 100%;
     height: 170px;
@@ -570,25 +442,18 @@ body {
     border-radius: 4px;
     margin-bottom: 18px;
 }
-
-
-/* TITRE */
 .hobby-card h3 {
     font-family: 'Libre Baskerville', serif;
     font-size: 18px;
     margin-bottom: 10px;
     color: #5A7A5A;
 }
-
-/* TEXTE */
 .hobby-card p {
     font-size: 15px;
     line-height: 1.6;
     color: #444;
     margin-bottom: 14px;
 }
-
-/* COMPÉTENCES */
 .hobby-skill {
     font-size: 13px;
     color: #777;
@@ -596,10 +461,10 @@ body {
 }
 .hobbies-intro {
     font-family: 'Libre Baskerville', serif;
-    font-size: 16px;          
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
-    max-width: 720px;         /* évite l'effet pavé */
+    max-width: 720px;
     margin: 0 0 60px 0;
     color: #222;
 }
@@ -608,7 +473,6 @@ body {
     padding: 18px 0;
     margin-top: 60px;
 }
-
 .footer-content {
     max-width: 900px;
     margin: auto;
@@ -617,7 +481,6 @@ body {
     gap: 40px;
     align-items: center;
 }
-
 .footer-link {
     color: #ffffff;
     text-decoration: none;
@@ -626,26 +489,15 @@ body {
     align-items: center;
     gap: 8px;
 }
-
 .footer-link:hover {
     text-decoration: underline;
 }
-
-/* ANIMATION */
 @keyframes hobbyScroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
-    .hobby-card {
-        width: 230px;
-    }
+    .hobby-card { width: 230px; }
 }
 .skills-row {
     display: flex;
@@ -654,16 +506,13 @@ body {
     gap: 80px;
     margin-top: 40px;
 }
-
 .icon-container {
     position: relative;
     width: 180px;
 }
-
 .icon-container svg {
     width: 100%;
 }
-
 .icon-text {
     position: absolute;
     top: 45%;
