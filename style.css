@@ -582,6 +582,7 @@ body {
 .top-header {
     position: relative;
     overflow: hidden;
+    padding: 80px 20px 40px;
 }
 .header-illustration {
     position: absolute;
