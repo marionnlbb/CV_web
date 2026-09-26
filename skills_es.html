@@ -1,383 +1,211 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-page="skills">
 <head>
     <meta charset="UTF-8">
     <title>Marion Lebeau | Competencias</title>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .mindmap-wrap {
-            max-width: 900px;
-            margin: 0 auto;
-            font-family: 'Libre Baskerville', serif;
-        }
-        .mindmap-wrap svg {
-            width: 100%;
-            height: 340px;
-            display: block;
-        }
-        .mm-panel {
-            min-height: 140px;
-            padding: 1.5rem 2rem;
-            border-top: 2px solid #ddd;
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-        .mm-panel.visible {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        .mm-panel-title {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 18px;
-            margin-bottom: 1.2rem;
-            color: #5A7A5A;
-        }
-        .mm-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
-        }
-        .mm-sub {
-            padding: 0.85rem 1rem;
-            border: 0.5px solid #ddd;
-            border-radius: 6px;
-        }
-        .mm-sub-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.6rem;
-        }
-        .mm-sub ul {
-            list-style: none;
-            padding: 0;
-        }
-        .mm-sub ul li {
-            font-family: 'Inter', sans-serif;
-            font-size: 12px;
-            color: #555;
-            padding: 3px 0;
-        }
-        .mm-sub ul li::before {
-            content: "— ";
-            color: #bbb;
-        }
-        .mm-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .mm-tag {
-            font-family: 'Inter', sans-serif;
-            font-size: 12px;
-            background: #f5f5f5;
-            color: #444;
-            padding: 5px 12px;
-            border-radius: 20px;
-        }
-        @media (max-width: 600px) {
-            .mm-grid { grid-template-columns: 1fr; }
-        }
+        /* Ajustements spécifiques pour la mindmap dans le thème sombre */
+        .mindmap-wrap { max-width: 860px; margin: 0 auto 40px; position: relative; aspect-ratio: 16/8.5; }
+        .mindmap-wrap svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+        .mindmap-wrap line { stroke: url(#mg); stroke-width: 2; opacity: .55; }
+        
+        .mm-node { position: absolute; transform: translate(-50%, -50%); width: clamp(96px, 15vw, 140px); aspect-ratio: 1; border-radius: 50%;
+            display: grid; place-items: center; text-align: center; padding: 10px; font: 600 clamp(13px, 1.4vw, 16px)/1.2 var(--display); color: var(--frost);
+            background: radial-gradient(circle at 30% 28%, #1f4296, #0a1c45 70%); border: 1.5px solid rgba(95,212,238,.4);
+            cursor: pointer; transition: transform .2s, box-shadow .25s, border-color .25s; }
+        .mm-node:hover { transform: translate(-50%, -50%) scale(1.06); }
+        .mm-node.center { width: clamp(120px, 18vw, 170px); cursor: default; border: 0; font-size: clamp(15px, 1.8vw, 20px);
+            background: radial-gradient(circle at 32% 28%, #6f9dff, #1c3d92 72%); box-shadow: 0 0 60px rgba(61,123,255,.55); }
+        .mm-node.center:hover { transform: translate(-50%, -50%); }
+
+        .mm-panel { display: none; animation: fadeIn 0.3s ease; margin-top: 40px; }
+        .mm-panel.visible { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+        .scard { padding: 24px; border-radius: 18px; border: 1px solid var(--line); background: rgba(10,28,69,.55); }
+        .scard h4 { font: 600 15px var(--display); color: var(--cyan); margin-bottom: 14px; }
+        .scard ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+        .scard li { position: relative; padding-left: 16px; font-size: 15px; color: #d6e0f5; line-height: 1.45; }
+        .scard li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: var(--electric); }
+        
+        .mm-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .mm-tag { font-size: 14px; font-weight: 600; padding: 8px 16px; border-radius: 12px; background: rgba(61,123,255,.16); color: #bcd2ff; border: 1px solid var(--line); }
+
+        @media (max-width: 640px) { .mindmap-wrap { aspect-ratio: 1/1.2; } }
     </style>
 </head>
-
 <body>
 
-<header class="top-header">
-    <svg class="header-illustration" viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
-  <g opacity="0.07" stroke="#5A7A5A" stroke-width="1" fill="none">
-    <line x1="460" y1="205" x2="655" y2="205" stroke-width="0.8"/>
-    <line x1="460" y1="205" x2="460" y2="145" stroke-width="0.8"/>
-    <polyline points="465,200 475,199 482,197 486,190 488,180 489,170 490,162 491,155 492,162 493,172 495,185 498,193 504,196 510,194 514,188 516,180 517,174 518,168 519,174 520,182 522,190 526,196 535,198 542,196 545,190 547,183 548,177 549,183 550,190 553,196 560,199 572,200 580,198 584,192 586,185 587,178 588,185 589,192 591,198 600,200 620,201 640,201 652,200" stroke-width="1.2"/>
-    <circle cx="590" cy="55" r="35" stroke-width="0.8"/>
-    <circle cx="590" cy="55" r="5" fill="#5A7A5A"/>
-    <line x1="555" y1="20" x2="590" y2="55"/>
-    <line x1="550" y1="22" x2="585" y2="57"/>
-    <line x1="590" y1="55" x2="625" y2="20"/>
-    <line x1="590" y1="55" x2="640" y2="35"/>
-    <line x1="590" y1="55" x2="640" y2="55"/>
-    <line x1="555" y1="55" x2="625" y2="55" stroke-width="0.5"/>
-    <line x1="555" y1="65" x2="625" y2="65" stroke-width="0.5"/>
-    <line x1="555" y1="75" x2="625" y2="75" stroke-width="0.5"/>
-    <line x1="30" y1="80" x2="55" y2="65"/>
-    <line x1="55" y1="65" x2="80" y2="80"/>
-    <line x1="80" y1="80" x2="80" y2="110"/>
-    <line x1="80" y1="110" x2="55" y2="125"/>
-    <line x1="55" y1="125" x2="30" y2="110"/>
-    <line x1="30" y1="110" x2="30" y2="80"/>
-    <line x1="32" y1="78" x2="57" y2="63"/>
-    <line x1="78" y1="82" x2="78" y2="108"/>
-    <line x1="32" y1="112" x2="57" y2="127"/>
-    <line x1="55" y1="65" x2="55" y2="45"/>
-    <line x1="80" y1="80" x2="105" y2="65"/>
-    <line x1="105" y1="65" x2="130" y2="80"/>
-    <line x1="130" y1="80" x2="130" y2="110"/>
-    <line x1="105" y1="65" x2="105" y2="45"/>
-    <line x1="130" y1="110" x2="105" y2="125"/>
-    <line x1="80" y1="110" x2="105" y2="125"/>
-    <line x1="30" y1="80" x2="10" y2="65"/>
-    <line x1="30" y1="110" x2="10" y2="125"/>
-    <circle cx="55" cy="45" r="4" fill="#5A7A5A"/>
-    <circle cx="105" cy="45" r="4" fill="#5A7A5A"/>
-    <circle cx="10" cy="65" r="4" fill="#5A7A5A"/>
-    <circle cx="10" cy="125" r="4" fill="#5A7A5A"/>
-    <line x1="200" y1="110" x2="200" y2="15" stroke-width="0.8"/>
-    <line x1="200" y1="110" x2="350" y2="110" stroke-width="0.8"/>
-    <path d="M205,20 Q230,40 260,65 Q280,80 310,95 Q330,103 348,108" stroke-width="1.2"/>
-    <path d="M205,30 Q225,50 245,70 Q265,85 290,97 Q320,106 348,109" stroke-width="0.8"/>
-    <line x1="220" y1="35" x2="230" y2="50" stroke-width="0.5"/>
-    <line x1="235" y1="45" x2="245" y2="62" stroke-width="0.5"/>
-    <line x1="250" y1="58" x2="257" y2="73" stroke-width="0.5"/>
-    <line x1="265" y1="70" x2="270" y2="83" stroke-width="0.5"/>
-    <line x1="280" y1="80" x2="284" y2="91" stroke-width="0.5"/>
-    <line x1="30" y1="205" x2="180" y2="205" stroke-width="0.8"/>
-    <line x1="30" y1="205" x2="30" y2="155" stroke-width="0.8"/>
-    <polygon points="105,165 120,185 105,205 90,185"/>
-    <line x1="105" y1="155" x2="105" y2="165"/>
-    <line x1="90" y1="185" x2="120" y2="185" stroke-width="0.5"/>
-    <line x1="90" y1="183" x2="90" y2="187" stroke-width="0.8"/>
-    <line x1="120" y1="183" x2="120" y2="187" stroke-width="0.8"/>
-    <rect x="360" y="15" width="60" height="60" stroke-width="0.8"/>
-    <circle cx="360" cy="15" r="5" fill="#5A7A5A"/>
-    <circle cx="420" cy="15" r="5" fill="#5A7A5A"/>
-    <circle cx="360" cy="75" r="5" fill="#5A7A5A"/>
-    <circle cx="420" cy="75" r="5" fill="#5A7A5A"/>
-    <circle cx="390" cy="15" r="4" fill="#5A7A5A"/>
-    <circle cx="390" cy="75" r="4" fill="#5A7A5A"/>
-    <circle cx="360" cy="45" r="4" fill="#5A7A5A"/>
-    <circle cx="420" cy="45" r="4" fill="#5A7A5A"/>
-    <circle cx="390" cy="45" r="6" fill="#5A7A5A"/>
-    <line x1="360" y1="15" x2="385" y2="5"/>
-    <line x1="420" y1="15" x2="445" y2="5"/>
-    <line x1="385" y1="5" x2="445" y2="5"/>
-    <line x1="445" y1="5" x2="445" y2="65"/>
-    <line x1="420" y1="75" x2="445" y2="65"/>
-    <circle cx="445" cy="5" r="5" fill="#5A7A5A"/>
-    <circle cx="385" cy="5" r="4" fill="#5A7A5A"/>
-    <circle cx="445" cy="65" r="4" fill="#5A7A5A"/>
-    <circle cx="415" cy="5" r="4" fill="#5A7A5A"/>
-    <circle cx="445" cy="35" r="4" fill="#5A7A5A"/>
-  </g>
-</svg>
-    <div class="language-switch">
-        <a href="skills_fr.html" class="lang-btn">
-            <img src="fr.svg" class="flag-icon" alt="Français">
-        </a>
-        <a href="skills.html" class="lang-btn">
-            <img src="gb.svg" class="flag-icon" alt="English">
-        </a>
-        <a href="skills_es.html" class="lang-btn">
-            <img src="es.svg" class="flag-icon" alt="Español">
-        </a>
+<header class="nav scrolled">
+    <div class="wrap">
+        <a href="index_es.html" class="brand">MARION LEBEAU</a>
+        <nav>
+            <ul>
+                <li><a href="index_es.html">Sobre mí</a></li>
+                <li><a href="journey_es.html">Mi recorrido</a></li>
+                <li><a href="projects_es.html">Proyectos</a></li>
+                <li><a href="skills_es.html" aria-current="page">Competencias</a></li>
+                <li><a href="hobbies_es.html">Aficiones</a></li>
+            </ul>
+        </nav>
+        <div class="lang">
+            <a href="skills_fr.html">FR</a>
+            <a href="skills.html">EN</a>
+            <a href="skills_es.html" aria-current="true">ES</a>
+        </div>
     </div>
-
-    <h1 class="name">MARION LEBEAU</h1>
-
-    <nav class="nav">
-        <a href="index_es.html" class="nav-link">Sobre mí</a>
-        <a href="journey_es.html" class="nav-link">Mi recorrido</a>
-        <a href="projects_es.html" class="nav-link">Proyectos</a>
-        <a href="skills_es.html" class="nav-link active">Competencias</a>
-        <a href="hobbies_es.html" class="nav-link">Aficiones</a>
-    </nav>
 </header>
-<div class="bandeau-stage">
-    🔔 <strong>Busco prácticas de 6 meses a partir de febrero de 2027</strong> — elaboración, caracterización de materiales o ecodiseño / ACV, en entorno industrial
-</div>
-<section class="content">
 
-    <p class="hobbies-intro">Haz clic en una rama para explorar mis competencias.</p>
+<section class="page block active wrap" style="padding-top: 140px;">
+    <h2>Competencias y Experiencia</h2>
+    <p class="hint" style="color: var(--mist); margin-bottom: 24px;">Haz clic en una rama para explorar mis áreas de competencia técnica y profesional.</p>
 
     <div class="mindmap-wrap">
-
-        <svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg">
-
-            <line x1="340" y1="170" x2="155" y2="90"  stroke="#5A7A5A" stroke-width="1.5"/>
-            <line x1="340" y1="170" x2="525" y2="90"  stroke="#888780" stroke-width="1.5"/>
-            <line x1="340" y1="170" x2="155" y2="250" stroke="#5DCAA5" stroke-width="1.5"/>
-            <line x1="340" y1="170" x2="525" y2="250" stroke="#AFA9EC" stroke-width="1.5"/>
-
-            <g style="cursor:pointer" onclick="showPanel('exp')">
-                <circle id="c-exp" cx="155" cy="90" r="45" fill="#EAF3DE" stroke="#5A7A5A" stroke-width="1.5"/>
-                <text x="155" y="85"  text-anchor="middle" font-size="12" fill="#27500A" font-family="'Libre Baskerville', serif">Experi-</text>
-                <text x="155" y="100" text-anchor="middle" font-size="12" fill="#27500A" font-family="'Libre Baskerville', serif">mental</text>
-            </g>
-
-            <g style="cursor:pointer" onclick="showPanel('soft')">
-                <circle id="c-soft" cx="525" cy="90" r="45" fill="#F1EFE8" stroke="#888780" stroke-width="1.5"/>
-                <text x="525" y="94" text-anchor="middle" font-size="12" fill="#444441" font-family="'Libre Baskerville', serif">Software</text>
-            </g>
-
-            <g style="cursor:pointer" onclick="showPanel('lang')">
-                <circle id="c-lang" cx="155" cy="250" r="45" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="1.5"/>
-                <text x="155" y="254" text-anchor="middle" font-size="12" fill="#085041" font-family="'Libre Baskerville', serif">Idiomas</text>
-            </g>
-
-            <g style="cursor:pointer" onclick="showPanel('asso')">
-                <circle id="c-asso" cx="525" cy="250" r="45" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="1.5"/>
-                <text x="525" y="247" text-anchor="middle" font-size="12" fill="#3C3489" font-family="'Libre Baskerville', serif">Activi-</text>
-                <text x="525" y="262" text-anchor="middle" font-size="12" fill="#3C3489" font-family="'Libre Baskerville', serif">dades</text>
-            </g>
-
-            <circle cx="340" cy="170" r="50" fill="#5A7A5A"/>
-            <text x="340" y="166" text-anchor="middle" font-size="13" fill="white" font-family="'Libre Baskerville', serif">Marion</text>
-            <text x="340" y="182" text-anchor="middle" font-size="13" fill="white" font-family="'Libre Baskerville', serif">&amp; co</text>
-
+        <svg viewBox="0 0 860 400">
+            <defs>
+                <linearGradient id="mg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--electric)" />
+                    <stop offset="100%" stop-color="var(--cyan)" />
+                </linearGradient>
+            </defs>
+            <line x1="430" y1="200" x2="215" y2="100" />
+            <line x1="430" y1="200" x2="645" y2="100" />
+            <line x1="430" y1="200" x2="215" y2="300" />
+            <line x1="430" y1="200" x2="645" y2="300" />
         </svg>
 
-        <!-- PANEL EXPERIMENTAL -->
-        <div id="panel-exp" class="mm-panel" style="border-top-color:#5A7A5A;">
-            <div class="mm-panel-title">Competencias experimentales</div>
-            <div class="mm-grid">
-                <div class="mm-sub" style="border-color:#5A7A5A;">
-                    <div class="mm-sub-title" style="color:#5A7A5A;">Ensayos mecánicos</div>
-                    <ul>
-                        <li>Tracción (curvas tensión-deformación)</li>
-                        <li>Dureza Vickers</li>
-                        <li>Resistencia al impacto</li>
-                        <li>Flexión tres puntos</li>
-                        <li>Compresión</li>
-                    </ul>
-                </div>
-                <div class="mm-sub" style="border-color:#5A7A5A;">
-                    <div class="mm-sub-title" style="color:#5A7A5A;">Caracterización de materiales</div>
-                    <ul>
-                        <li>Análisis microestructural (SEM)</li>
-                        <li>Composición de aleaciones</li>
-                        <li>Calorimetría diferencial (DSC)</li>
-                        <li>Espectroscopía IR / FTIR</li>
-                    </ul>
-                </div>
-                <div class="mm-sub" style="border-color:#5A7A5A;">
-                    <div class="mm-sub-title" style="color:#5A7A5A;">Superficie &amp; Interfaz</div>
-                    <ul>
-                        <li>Adherencia de recubrimientos</li>
-                        <li>Ángulo de contacto (mojabilidad)</li>
-                    </ul>
-                </div>
-                <div class="mm-sub" style="border-color:#5A7A5A;">
-                    <div class="mm-sub-title" style="color:#5A7A5A;">Medidas físicas</div>
-                    <ul>
-                        <li>Conductividad térmica / eléctrica</li>
-                        <li>Caída de presión</li>
-                        <li>Porosidad &amp; densidad</li>
-                        <li>Dilatometría</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- PANEL SOFTWARE -->
-        <div id="panel-soft" class="mm-panel" style="border-top-color:#888780;">
-            <div class="mm-panel-title" style="color:#444441;">Software</div>
-            <div class="mm-tags">
-                <span class="mm-tag">Python</span>
-                <span class="mm-tag">Java</span>
-                <span class="mm-tag">AutoCAD</span>
-                <span class="mm-tag">Fusion 360</span>
-                <span class="mm-tag">Serpent (Monte Carlo)</span>
-                <span class="mm-tag">Apollo3 (códigos deterministas)</span>
-                <span class="mm-tag">Excel</span>
-                <span class="mm-tag">SQL</span>
-                <span class="mm-tag">LaTeX</span>
-                <span class="mm-tag">HTML / CSS</span>
-            </div>
-        </div>
-
-        <!-- PANEL IDIOMAS -->
-        <div id="panel-lang" class="mm-panel" style="border-top-color:#5DCAA5;">
-            <div class="mm-panel-title" style="color:#085041;">Idiomas</div>
-            <div class="mm-tags">
-                <span class="mm-tag">🇫🇷 Francés — nativo</span>
-                <span class="mm-tag">🇬🇧 Inglés — C1</span>
-                <span class="mm-tag">🇪🇸 Español — B1</span>
-                <span class="mm-tag">🇩🇪 Alemán — A2</span>
-            </div>
-        </div>
-
-        <!-- PANEL ACTIVIDADES -->
-        <div id="panel-asso" class="mm-panel" style="border-top-color:#AFA9EC;">
-            <div class="mm-panel-title" style="color:#3C3489;">Actividades asociativas</div>
-            <div class="mm-grid">
-                <div class="mm-sub" style="border-color:#AFA9EC;">
-                    <div class="mm-sub-title" style="color:#3C3489;">Buró de Deportes</div>
-                    <ul>
-                        <li>Integración &amp; eventos</li>
-                    </ul>
-                </div>
-                <div class="mm-sub" style="border-color:#AFA9EC;">
-                    <div class="mm-sub-title" style="color:#3C3489;">Tesorería estudiantil</div>
-                    <ul>
-                        <li>13 asociaciones estudiantiles</li>
-                        <li>Presupuesto global 500 000 €</li>
-                    </ul>
-                </div>
-                <div class="mm-sub" style="border-color:#AFA9EC;">
-                    <div class="mm-sub-title" style="color:#3C3489;">Reserva Gendarmería</div>
-                    <ul>
-                        <li>Brigadier-jefe</li>
-                        <li>Misiones operativas</li>
-                    </ul>
-                </div>
-                <div class="mm-sub" style="border-color:#AFA9EC;">
-                    <div class="mm-sub-title" style="color:#3C3489;">UNASS Midi-Pyrénées Socorrismo</div>
-                    <ul>
-                        <li>Responsable de comunicación</li>
-                        <li>Redes sociales</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
+        <div class="mm-node" style="left: 25%; top: 25%;" onclick="showPanel('exp')">Experimental</div>
+        <div class="mm-node" style="left: 75%; top: 25%;" onclick="showPanel('soft')">Software</div>
+        <div class="mm-node" style="left: 25%; top: 75%;" onclick="showPanel('lang')">Idiomas</div>
+        <div class="mm-node" style="left: 75%; top: 75%;" onclick="showPanel('asso')">Actividades</div>
+        <div class="mm-node center" style="left: 50%; top: 50%;">Marion<br>&amp; co</div>
     </div>
 
+    <!-- Panel Experimental -->
+    <div id="panel-exp" class="mm-panel">
+        <h3 class="skill-panel h3" style="color:var(--cyan); margin-bottom:20px;">Competencias experimentales</h3>
+        <div class="sgrid">
+            <div class="scard">
+                <h4>Ensayos mecánicos</h4>
+                <ul>
+                    <li>Tracción (curvas tensión-deformación)</li>
+                    <li>Dureza Vickers</li>
+                    <li>Resistencia al impacto</li>
+                    <li>Flexión tres puntos y compresión</li>
+                </ul>
+            </div>
+            <div class="scard">
+                <h4>Caracterización de materiales</h4>
+                <ul>
+                    <li>Análisis microestructural (SEM)</li>
+                    <li>Composición y estructura de aleaciones</li>
+                    <li>Calorimetría diferencial de barrido (DSC)</li>
+                    <li>Espectroscopía IR / FTIR</li>
+                </ul>
+            </div>
+            <div class="scard">
+                <h4>Superficie e Interfaz</h4>
+                <ul>
+                    <li>Adherencia de recubrimientos</li>
+                    <li>Ángulo de contacto y mojabilidad</li>
+                </ul>
+            </div>
+            <div class="scard">
+                <h4>Medidas físicas</h4>
+                <ul>
+                    <li>Conductividad térmica y eléctrica</li>
+                    <li>Porosidad y análisis de densidad</li>
+                    <li>Dilatometría</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel Software -->
+    <div id="panel-soft" class="mm-panel">
+        <h3 class="skill-panel h3" style="color:var(--cyan); margin-bottom:20px;">Software y Herramientas</h3>
+        <div class="mm-tags">
+            <span class="mm-tag">Python</span>
+            <span class="mm-tag">Java</span>
+            <span class="mm-tag">AutoCAD</span>
+            <span class="mm-tag">Fusion 360</span>
+            <span class="mm-tag">Serpent (Monte Carlo)</span>
+            <span class="mm-tag">Apollo3</span>
+            <span class="mm-tag">Excel / SQL</span>
+            <span class="mm-tag">LaTeX</span>
+            <span class="mm-tag">HTML / CSS</span>
+        </div>
+    </div>
+
+    <!-- Panel Idiomas -->
+    <div id="panel-lang" class="mm-panel">
+        <h3 class="skill-panel h3" style="color:var(--cyan); margin-bottom:20px;">Idiomas</h3>
+        <div class="mm-tags">
+            <span class="mm-tag">🇫🇷 Francés — Nativo</span>
+            <span class="mm-tag">🇬🇧 Inglés — C1</span>
+            <span class="mm-tag">🇪🇸 Español — B1</span>
+            <span class="mm-tag">🇩🇪 Alemán — A2</span>
+        </div>
+    </div>
+
+    <!-- Panel Actividades Asociativas -->
+    <div id="panel-asso" class="mm-panel">
+        <h3 class="skill-panel h3" style="color:var(--cyan); margin-bottom:20px;">Actividades asociativas y compromiso</h3>
+        <div class="sgrid">
+            <div class="scard">
+                <h4>Buró de Deportes (BDS)</h4>
+                <ul>
+                    <li>Integración y organización de eventos</li>
+                    <li>Gestión y logística deportiva</li>
+                </ul>
+            </div>
+            <div class="scard">
+                <h4>Tesorería estudiantil</h4>
+                <ul>
+                    <li>Gestión financiera para 13 asociaciones</li>
+                    <li>Coordinación de presupuesto global de 500.000 €</li>
+                </ul>
+            </div>
+            <div class="scard">
+                <h4>Reserva de la Gendarmería</h4>
+                <ul>
+                    <li>Misiones operativas (Brigadier)</li>
+                    <li>Seguridad en el terreno y apoyo al mando</li>
+                </ul>
+            </div>
+            <div class="scard">
+                <h4>Socorrismo (UNASS)</h4>
+                <ul>
+                    <li>Responsable de comunicación</li>
+                    <li>Divulgación pública y redes sociales</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>
 
-<footer class="footer">
-    <div class="footer-content">
-        <a href="mailto:&#109;&#97;&#114;&#105;&#111;&#110;&#46;&#108;&#101;&#98;&#101;&#97;&#117;&#64;&#105;&#109;&#116;&#45;&#97;&#116;&#108;&#97;&#110;&#116;&#105;&#113;&#117;&#101;&#46;&#110;&#101;&#116;" class="footer-link">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M22 6L12 13L2 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            &#109;&#97;&#114;&#105;&#111;&#110;&#46;&#108;&#101;&#98;&#101;&#97;&#117;&#64;&#105;&#109;&#116;&#45;&#97;&#116;&#108;&#97;&#110;&#116;&#105;&#113;&#117;&#101;&#46;&#110;&#101;&#116;
-        </a>
-        <a href="https://www.linkedin.com/in/marion-lebeau02" target="_blank" class="footer-link">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff">
-                <path d="M4.98 3.5C4.98 4.60457 4.08457 5.5 2.98 5.5C1.87543 5.5 0.98 4.60457 0.98 3.5C0.98 2.39543 1.87543 1.5 2.98 1.5C4.08457 1.5 4.98 2.39543 4.98 3.5Z"/>
-                <path d="M0.98 8H4.98V22H0.98V8Z"/>
-                <path d="M8.98 8H12.74V10.02H12.8C13.32 9.02 14.72 7.96 16.78 7.96C21.02 7.96 22 10.64 22 14.28V22H18V15.2C18 13.36 17.96 11.04 15.5 11.04C13 11.04 12.64 13.04 12.64 15.08V22H8.98V8Z"/>
-            </svg>
-            linkedin.com/in/marion-lebeau02
-        </a>
+<footer class="foot" style="margin-top: 80px;">
+    <div class="wrap" style="display: flex; justify-content: space-between; align-items: center;">
+        <p>© 2026 Marion Lebeau</p>
+        <a href="mailto:marion.lebeau@imt-atlantique.net" style="color: var(--mist); text-decoration: none;">marion.lebeau@imt-atlantique.net</a>
     </div>
 </footer>
 
 <script>
-    const current = { id: null };
-    const circles = { exp: 'c-exp', soft: 'c-soft', lang: 'c-lang', asso: 'c-asso' };
-
+    let activePanel = null;
     function showPanel(id) {
-        Object.keys(circles).forEach(k => {
-            document.getElementById(circles[k]).setAttribute('stroke-width', '1.5');
-        });
-        if (current.id === id) {
-            document.getElementById('panel-' + id).classList.remove('visible');
-            current.id = null;
+        const panel = document.getElementById('panel-' + id);
+        if (activePanel === id) {
+            panel.classList.remove('visible');
+            activePanel = null;
             return;
         }
-        ['exp','soft','lang','asso'].forEach(k => {
-            document.getElementById('panel-' + k).classList.remove('visible');
-        });
-        document.getElementById('panel-' + id).classList.add('visible');
-        document.getElementById(circles[id]).setAttribute('stroke-width', '3');
-        current.id = id;
+        document.querySelectorAll('.mm-panel').forEach(p => p.classList.remove('visible'));
+        panel.classList.add('visible');
+        activePanel = id;
     }
 </script>
 
