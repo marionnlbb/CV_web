@@ -374,4 +374,4 @@ footer.foot{padding:28px 0;font-size:13px;color:var(--mist);border-top:1px solid
 }
 /* photos du parcours */
 .timeline-img{margin-top:1rem;border-radius:12px;overflow:hidden}
-.timeline-img img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.timeline-img img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
