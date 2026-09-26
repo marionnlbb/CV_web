@@ -16,11 +16,12 @@
             background: radial-gradient(circle at 30% 28%, #1f4296, #0a1c45 70%); border: 1.5px solid rgba(95,212,238,.4);
             cursor: pointer; transition: transform .2s, box-shadow .25s, border-color .25s; }
         .mm-node:hover { transform: translate(-50%, -50%) scale(1.06); }
+        .mm-node.active { border-color: var(--cyan); box-shadow: 0 0 0 6px rgba(95,212,238,.15), 0 0 30px rgba(95,212,238,.4); }
         .mm-node.center { width: clamp(120px, 18vw, 170px); cursor: default; border: 0; font-size: clamp(15px, 1.8vw, 20px);
             background: radial-gradient(circle at 32% 28%, #6f9dff, #1c3d92 72%); box-shadow: 0 0 60px rgba(61,123,255,.55); }
         .mm-node.center:hover { transform: translate(-50%, -50%); }
 
-        .mm-panel { display: none; animation: fadeIn 0.3s ease; margin-top: 40px; }
+        .mm-panel { display: none; animation: fadeIn 0.3s ease; margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--line); }
         .mm-panel.visible { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
         
@@ -77,16 +78,16 @@
             <line x1="430" y1="200" x2="645" y2="300" />
         </svg>
 
-        <div class="mm-node" style="left: 25%; top: 25%;" onclick="showPanel('exp')">Experimental</div>
-        <div class="mm-node" style="left: 75%; top: 25%;" onclick="showPanel('soft')">Software</div>
-        <div class="mm-node" style="left: 25%; top: 75%;" onclick="showPanel('lang')">Idiomas</div>
-        <div class="mm-node" style="left: 75%; top: 75%;" onclick="showPanel('asso')">Actividades</div>
+        <div class="mm-node" id="node-exp" style="left: 25%; top: 25%;" onclick="showPanel('exp')">Experimental</div>
+        <div class="mm-node" id="node-soft" style="left: 75%; top: 25%;" onclick="showPanel('soft')">Software</div>
+        <div class="mm-node" id="node-lang" style="left: 25%; top: 75%;" onclick="showPanel('lang')">Idiomas</div>
+        <div class="mm-node" id="node-asso" style="left: 75%; top: 75%;" onclick="showPanel('asso')">Actividades</div>
         <div class="mm-node center" style="left: 50%; top: 50%;">Marion<br>&amp; co</div>
     </div>
 
     <!-- Panel Experimental -->
     <div id="panel-exp" class="mm-panel">
-        <h3 class="skill-panel h3" style="color:var(--cyan); margin-bottom:20px;">Competencias experimentales</h3>
+        <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Competencias experimentales</h3>
         <div class="sgrid">
             <div class="scard">
                 <h4>Ensayos mecánicos</h4>
@@ -126,7 +127,7 @@
 
     <!-- Panel Software -->
     <div id="panel-soft" class="mm-panel">
-        <h3 class="skill-panel h3" style="color:var(--cyan); margin-bottom:20px;">Software y Herramientas</h3>
+        <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Software y Herramientas</h3>
         <div class="mm-tags">
             <span class="mm-tag">Python</span>
             <span class="mm-tag">Java</span>
@@ -142,7 +143,7 @@
 
     <!-- Panel Idiomas -->
     <div id="panel-lang" class="mm-panel">
-        <h3 class="skill-panel h3" style="color:var(--cyan); margin-bottom:20px;">Idiomas</h3>
+        <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Idiomas</h3>
         <div class="mm-tags">
             <span class="mm-tag">🇫🇷 Francés — Nativo</span>
             <span class="mm-tag">🇬🇧 Inglés — C1</span>
@@ -153,7 +154,7 @@
 
     <!-- Panel Actividades Asociativas -->
     <div id="panel-asso" class="mm-panel">
-        <h3 class="skill-panel h3" style="color:var(--cyan); margin-bottom:20px;">Actividades asociativas y compromiso</h3>
+        <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Actividades asociativas y compromiso</h3>
         <div class="sgrid">
             <div class="scard">
                 <h4>Buró de Deportes (BDS)</h4>
@@ -198,13 +199,20 @@
     let activePanel = null;
     function showPanel(id) {
         const panel = document.getElementById('panel-' + id);
+        const node = document.getElementById('node-' + id);
+        
         if (activePanel === id) {
             panel.classList.remove('visible');
+            node.classList.remove('active');
             activePanel = null;
             return;
         }
+        
         document.querySelectorAll('.mm-panel').forEach(p => p.classList.remove('visible'));
+        document.querySelectorAll('.mm-node').forEach(n => n.classList.remove('active'));
+        
         panel.classList.add('visible');
+        node.classList.add('active');
         activePanel = id;
     }
 </script>
