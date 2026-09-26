@@ -8,70 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-    /* Styles spécifiques pour valoriser le statut de stage et les chiffres */
-    .hero-status-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: 24px;
-        padding: 10px 18px;
-        background: rgba(95, 212, 238, 0.1);
-        border: 1px solid rgba(95, 212, 238, 0.35);
-        border-radius: 30px;
-        color: var(--cyan);
-        font-weight: 600;
-        font-size: 14px;
-        box-shadow: 0 0 20px rgba(95, 212, 238, 0.15);
-        animation: pulseGlow 3s infinite ease-in-out;
-    }
-    .hero-status-badge i {
-        width: 8px;
-        height: 8px;
-        background: var(--cyan);
-        border-radius: 50%;
-        box-shadow: 0 0 8px var(--cyan);
-    }
-    @keyframes pulseGlow {
-        0%, 100% { border-color: rgba(95, 212, 238, 0.35); box-shadow: 0 0 15px rgba(95, 212, 238, 0.1); }
-        50% { border-color: rgba(95, 212, 238, 0.8); box-shadow: 0 0 30px rgba(95, 212, 238, 0.35); }
-    }
-
-    /* Grille de chiffres percutante */
-    .facts-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-        gap: 16px;
-        margin-top: 30px;
-    }
-    .fact-card {
-        background: rgba(10, 28, 69, 0.6);
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        padding: 20px 16px;
-        text-align: center;
-        transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-    .fact-card:hover {
-        transform: translateY(-3px);
-        border-color: var(--cyan);
-    }
-    .fact-card b {
-        display: block;
-        font-family: var(--display);
-        font-size: 32px;
-        font-weight: 800;
-        color: var(--cyan);
-        margin-bottom: 6px;
-        line-height: 1;
-    }
-    .fact-card span {
-        font-size: 13px;
-        color: var(--mist);
-        line-height: 1.3;
-        display: block;
-    }
-</style>
 </head>
 <body data-page="about">
 
@@ -124,10 +60,12 @@
         <a class="btn ghost" href="CV_en_anglais_cesure.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg><span>Download my CV</span></a>
         <a class="btn ghost" href="https://www.linkedin.com/in/marion-lebeau02" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-7.8c0-1.86-.03-4.25-2.6-4.25-2.6 0-3 2.03-3 4.12V23H8V8z"/></svg> LinkedIn</a>
       </div>
-      <!-- Statut de recherche de stage mis en valeur -->
-      <div class="hero-status-badge">
-        <i></i>
-        <span>Looking for a 6-month R&amp;D internship from February 2027</span>
+      <!-- Statut de recherche de stage compact et élégant -->
+      <div class="hero-status-container">
+        <div class="hero-status-badge">
+          <i></i>
+          <span>Looking for a 6-month R&amp;D internship from February 2027</span>
+        </div>
       </div>
     </div>
   </section>
@@ -141,7 +79,7 @@
         <p>I am an engineering student at IMT Atlantique, also completing a Master's degree in Materials Science and Engineering at Université de Lorraine. Sociable, sporty and endlessly curious, I love understanding how things are really made. What draws me in is the hands-on side: design, test, break, understand.</p>
         <p>This website is my story: the choices, the detours, and everything a CV doesn't quite say.</p>
         
-        <!-- Chiffres clés modernisés et mis en valeur -->
+        <!-- Chiffres clés valorisés en cartes -->
         <div class="facts-grid">
           <div class="fact-card">
             <b>6</b>
