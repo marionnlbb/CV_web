@@ -1,77 +1,109 @@
 <!DOCTYPE html>
-<html lang="en" data-page="skills">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Marion Lebeau | Skills</title>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Ajustements spécifiques pour la mindmap dans le thème sombre */
-        .mindmap-wrap { max-width: 860px; margin: 0 auto 40px; position: relative; aspect-ratio: 16/8.5; }
-        .mindmap-wrap svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-        .mindmap-wrap line { stroke: url(#mg); stroke-width: 2; opacity: .55; }
-        
-        .mm-node { position: absolute; transform: translate(-50%, -50%); width: clamp(96px, 15vw, 140px); aspect-ratio: 1; border-radius: 50%;
-            display: grid; place-items: center; text-align: center; padding: 10px; font: 600 clamp(13px, 1.4vw, 16px)/1.2 var(--display); color: var(--frost);
-            background: radial-gradient(circle at 30% 28%, #1f4296, #0a1c45 70%); border: 1.5px solid rgba(95,212,238,.4);
-            cursor: pointer; transition: transform .2s, box-shadow .25s, border-color .25s; }
-        .mm-node:hover { transform: translate(-50%, -50%) scale(1.06); }
-        .mm-node.active { border-color: var(--cyan); box-shadow: 0 0 0 6px rgba(95,212,238,.15), 0 0 30px rgba(95,212,238,.4); }
-        .mm-node.center { width: clamp(120px, 18vw, 170px); cursor: default; border: 0; font-size: clamp(15px, 1.8vw, 20px);
-            background: radial-gradient(circle at 32% 28%, #6f9dff, #1c3d92 72%); box-shadow: 0 0 60px rgba(61,123,255,.55); }
-        .mm-node.center:hover { transform: translate(-50%, -50%); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skills · Marion Lebeau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+    .mindmap-wrap { max-width: 860px; margin: 0 auto 40px; position: relative; aspect-ratio: 16/8.5; }
+    .mindmap-wrap svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    .mindmap-wrap line { stroke: url(#mg); stroke-width: 2; opacity: .55; }
+    
+    .mm-node { position: absolute; transform: translate(-50%, -50%); width: clamp(96px, 15vw, 140px); aspect-ratio: 1; border-radius: 50%;
+        display: grid; place-items: center; text-align: center; padding: 10px; font: 600 clamp(13px, 1.4vw, 16px)/1.2 var(--display); color: var(--frost);
+        background: radial-gradient(circle at 30% 28%, #1f4296, #0a1c45 70%); border: 1.5px solid rgba(95,212,238,.4);
+        cursor: pointer; transition: transform .2s, box-shadow .25s, border-color .25s; }
+    .mm-node:hover { transform: translate(-50%, -50%) scale(1.06); }
+    .mm-node.active { border-color: var(--cyan); box-shadow: 0 0 0 6px rgba(95,212,238,.15), 0 0 30px rgba(95,212,238,.4); }
+    .mm-node.center { width: clamp(120px, 18vw, 170px); cursor: default; border: 0; font-size: clamp(15px, 1.8vw, 20px);
+        background: radial-gradient(circle at 32% 28%, #6f9dff, #1c3d92 72%); box-shadow: 0 0 60px rgba(61,123,255,.55); }
+    .mm-node.center:hover { transform: translate(-50%, -50%); }
 
-        .mm-panel { display: none; animation: fadeIn 0.3s ease; margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--line); }
-        .mm-panel.visible { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-        
-        .sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
-        .scard { padding: 24px; border-radius: 18px; border: 1px solid var(--line); background: rgba(10,28,69,.55); }
-        .scard h4 { font: 600 15px var(--display); color: var(--cyan); margin-bottom: 14px; }
-        .scard ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-        .scard li { position: relative; padding-left: 16px; font-size: 15px; color: #d6e0f5; line-height: 1.45; }
-        .scard li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: var(--electric); }
-        
-        .mm-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-        .mm-tag { font-size: 14px; font-weight: 600; padding: 8px 16px; border-radius: 12px; background: rgba(61,123,255,.16); color: #bcd2ff; border: 1px solid var(--line); }
+    .mm-panel { display: none; animation: fadeIn 0.3s ease; margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--line); }
+    .mm-panel.visible { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    
+    .sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+    .scard { padding: 24px; border-radius: 18px; border: 1px solid var(--line); background: rgba(10,28,69,.55); }
+    .scard h4 { font: 600 15px var(--display); color: var(--cyan); margin-bottom: 14px; }
+    .scard ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .scard li { position: relative; padding-left: 16px; font-size: 15px; color: #d6e0f5; line-height: 1.45; }
+    .scard li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: var(--electric); }
+    
+    .mm-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .mm-tag { font-size: 14px; font-weight: 600; padding: 8px 16px; border-radius: 12px; background: rgba(61,123,255,.16); color: #bcd2ff; border: 1px solid var(--line); }
 
-        @media (max-width: 640px) { .mindmap-wrap { aspect-ratio: 1/1.2; } }
-    </style>
+    @media (max-width: 640px) { .mindmap-wrap { aspect-ratio: 1/1.2; } }
+</style>
 </head>
-<body>
+<body data-page="skills">
 
-<header class="nav scrolled">
-    <div class="wrap">
-        <a href="index.html" class="brand">MARION LEBEAU</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">About</a></li>
-                <li><a href="journey.html">Journey</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html" aria-current="page">Skills</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-            </ul>
-        </nav>
-        <div class="lang">
-            <a href="skills_fr.html">FR</a>
-            <a href="skills.html" aria-current="true">EN</a>
-            <a href="skills_es.html">ES</a>
-        </div>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Marion Lebeau</a>
+    <nav><ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html" aria-current="page">Skills</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+    </ul></nav>
+    <div class="lang">
+        <a href="skills_fr.html">FR</a>
+        <a href="skills.html" aria-current="true">EN</a>
+        <a href="skills_es.html">ES</a>
     </div>
+  </div>
 </header>
 
-<!-- Grand en-tête graphique style "Projects" -->
-<section class="page-header" style="position: relative; padding: 140px 0 80px; background: radial-gradient(circle at 50% -20%, #1a3c8a 0%, #06122e 70%); border-bottom: 1px solid var(--line); overflow: hidden;">
-    <div class="wrap" style="position: relative; z-index: 2;">
-        <h1 style="font: 800 clamp(36px, 5vw, 64px)/1.1 var(--display); color: var(--frost); margin-bottom: 16px;">Skills</h1>
-        <p style="font-size: clamp(16px, 1.8vw, 19px); color: var(--mist); max-width: 600px;">Experimentation, digital tools and commitments: an overview of my technical expertise.</p>
+<main>
+  <section class="hero">
+    <canvas id="waves" aria-hidden="true"></canvas>
+    <svg class="deco" viewBox="0 0 600 420" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <g class="st" stroke-width="2.2">
+        <path d="M330 250H450L510 208H390Z"/><path d="M330 130H450L510 88H390Z"/>
+        <path d="M330 250V130M450 250V130M510 208V88M390 208V88"/>
+      </g>
+      <g fill="#E6EEFF">
+        <circle cx="330" cy="250" r="8"/><circle cx="450" cy="250" r="8"/><circle cx="510" cy="208" r="8"/><circle cx="390" cy="208" r="8"/>
+        <circle cx="330" cy="130" r="8"/><circle cx="450" cy="130" r="8"/><circle cx="510" cy="88" r="8"/><circle cx="390" cy="88" r="8"/>
+      </g>
+      <g fill="#5FD4EE">
+        <circle cx="420" cy="229" r="6"/><circle cx="420" cy="109" r="6"/><circle cx="390" cy="190" r="6"/>
+        <circle cx="450" cy="148" r="6"/><circle cx="360" cy="169" r="6"/><circle cx="480" cy="169" r="6"/>
+      </g>
+      <g class="st" stroke-width="2.2">
+        <rect x="40" y="250" width="120" height="120" rx="4"/><path d="M34 370H166V380H34Z"/><path d="M40 280H160"/>
+        <rect x="86" y="270" width="28" height="22" rx="3"/><path d="M94 292L100 302L106 292"/>
+        <path d="M58 352H142"/>
+      </g>
+      <g class="ac" stroke-width="2.2"><path d="M86 346H114M83 339H117M86 332H114M89 325H111M92 318H108"/></g>
+      <g class="dim" stroke-width="1.6"><circle cx="190" cy="290" r="16"/><circle cx="190" cy="290" r="5"/><path d="M178 280Q150 262 118 276"/></g>
+      <g class="st" stroke-width="2"><path d="M230 380V270M230 380H350"/><path d="M345 375L350 380L345 385M225 275L230 270L235 275"/></g>
+      <path class="ac" stroke-width="3" d="M230 380L252 318Q262 300 285 296Q310 293 330 300"/>
+      <circle cx="330" cy="300" r="4.5" fill="#5FD4EE"/>
+      <g class="dim" stroke-width="1.8"><path d="M540 300L562 313V338L540 351L518 338V313Z"/></g>
+      <g fill="#9FB2D6"><circle cx="540" cy="300" r="4"/><circle cx="562" cy="313" r="4"/><circle cx="562" cy="338" r="4"/><circle cx="540" cy="351" r="4"/><circle cx="518" cy="338" r="4"/><circle cx="518" cy="313" r="4"/></g>
+      <g class="dim" stroke-width="1.6" transform="translate(120 120)">
+        <circle r="30"/><circle r="10"/>
+        <path d="M0-30V-40M0 30V40M-30 0H-40M30 0H40M21-21L28-28M-21 21L-28 28M21 21L28 28M-21-21L-28-28"/>
+      </g>
+    </svg>
+    <div class="wrap page-hero">
+      <h1>Skills</h1>
+      <p>Experimentation, digital tools and commitments: an overview of my technical expertise.</p>
     </div>
-</section>
+  </section>
 
-<section class="page block active wrap" style="padding-top: 60px;">
-    <p class="hint" style="color: var(--mist); margin-bottom: 30px;">Click on a branch to explore my fields of competence.</p>
+  <section class="block page active">
+    <div class="wrap">
+      <p class="hint" style="color: var(--mist); margin-bottom: 30px;">Click on a branch to explore my fields of competence.</p>
 
-    <div class="mindmap-wrap">
+      <div class="mindmap-wrap">
         <svg viewBox="0 0 860 400">
             <defs>
                 <linearGradient id="mg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -90,10 +122,10 @@
         <div class="mm-node" id="node-lang" style="left: 25%; top: 75%;" onclick="showPanel('lang')">Languages</div>
         <div class="mm-node" id="node-asso" style="left: 75%; top: 75%;" onclick="showPanel('asso')">Extracurricular</div>
         <div class="mm-node center" style="left: 50%; top: 50%;">Marion<br>&amp; co</div>
-    </div>
+      </div>
 
-    <!-- Panel Experimental -->
-    <div id="panel-exp" class="mm-panel">
+      <!-- Panel Experimental -->
+      <div id="panel-exp" class="mm-panel">
         <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Experimental skills</h3>
         <div class="sgrid">
             <div class="scard">
@@ -130,10 +162,10 @@
                 </ul>
             </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Panel Software -->
-    <div id="panel-soft" class="mm-panel">
+      <!-- Panel Software -->
+      <div id="panel-soft" class="mm-panel">
         <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Software &amp; Tools</h3>
         <div class="mm-tags">
             <span class="mm-tag">Python</span>
@@ -146,10 +178,10 @@
             <span class="mm-tag">LaTeX</span>
             <span class="mm-tag">HTML / CSS</span>
         </div>
-    </div>
+      </div>
 
-    <!-- Panel Languages -->
-    <div id="panel-lang" class="mm-panel">
+      <!-- Panel Languages -->
+      <div id="panel-lang" class="mm-panel">
         <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Languages</h3>
         <div class="mm-tags">
             <span class="mm-tag">🇫🇷 French — Native</span>
@@ -157,10 +189,10 @@
             <span class="mm-tag">🇪🇸 Spanish — B1</span>
             <span class="mm-tag">🇩🇪 German — A2</span>
         </div>
-    </div>
+      </div>
 
-    <!-- Panel Extracurricular -->
-    <div id="panel-asso" class="mm-panel">
+      <!-- Panel Extracurricular -->
+      <div id="panel-asso" class="mm-panel">
         <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Extracurricular commitments</h3>
         <div class="sgrid">
             <div class="scard">
@@ -192,18 +224,24 @@
                 </ul>
             </div>
         </div>
-    </div>
-</section>
+      </div>
 
-<footer class="foot" style="margin-top: 80px;">
-    <div class="wrap" style="display: flex; justify-content: space-between; align-items: center;">
-        <p>© 2026 Marion Lebeau</p>
-        <div style="display: flex; gap: 20px;">
-            <a href="mailto:marion.lebeau@imt-atlantique.net" style="color: var(--mist); text-decoration: none;">marion.lebeau@imt-atlantique.net</a>
-            <a href="https://www.linkedin.com/in/marion-lebeau02" target="_blank" style="color: var(--mist); text-decoration: none;">LinkedIn</a>
-        </div>
     </div>
-</footer>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <h2>Let&#x27;s work together</h2>
+      <p>Looking for a motivated R&amp;D intern for February 2027? Drop me a line, I reply quickly.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:marion.lebeau@imt-atlantique.net">marion.lebeau@imt-atlantique.net</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/marion-lebeau02" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap">© 2026 Marion Lebeau</div></footer>
 
 <script>
     let activePanel = null;
