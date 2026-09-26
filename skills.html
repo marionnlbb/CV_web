@@ -55,13 +55,21 @@
         <div class="lang">
             <a href="skills_fr.html">FR</a>
             <a href="skills.html" aria-current="true">EN</a>
+            <a href="skills_es.html">ES</a>
         </div>
     </div>
 </header>
 
-<section class="page block active wrap" style="padding-top: 140px;">
-    <h2>Skills & Expertise</h2>
-    <p class="hint" style="color: var(--mist); margin-bottom: 24px;">Click on a branch to explore my technical and professional skill sets.</p>
+<!-- Grand en-tête graphique style "Projects" -->
+<section class="page-header" style="position: relative; padding: 140px 0 80px; background: radial-gradient(circle at 50% -20%, #1a3c8a 0%, #06122e 70%); border-bottom: 1px solid var(--line); overflow: hidden;">
+    <div class="wrap" style="position: relative; z-index: 2;">
+        <h1 style="font: 800 clamp(36px, 5vw, 64px)/1.1 var(--display); color: var(--frost); margin-bottom: 16px;">Skills</h1>
+        <p style="font-size: clamp(16px, 1.8vw, 19px); color: var(--mist); max-width: 600px;">Experimentation, digital tools and commitments: an overview of my technical expertise.</p>
+    </div>
+</section>
+
+<section class="page block active wrap" style="padding-top: 60px;">
+    <p class="hint" style="color: var(--mist); margin-bottom: 30px;">Click on a branch to explore my fields of competence.</p>
 
     <div class="mindmap-wrap">
         <svg viewBox="0 0 860 400">
@@ -80,44 +88,44 @@
         <div class="mm-node" id="node-exp" style="left: 25%; top: 25%;" onclick="showPanel('exp')">Experimental</div>
         <div class="mm-node" id="node-soft" style="left: 75%; top: 25%;" onclick="showPanel('soft')">Software</div>
         <div class="mm-node" id="node-lang" style="left: 25%; top: 75%;" onclick="showPanel('lang')">Languages</div>
-        <div class="mm-node" id="node-asso" style="left: 75%; top: 75%;" onclick="showPanel('asso')">Involvement</div>
-        <div class="mm-node center" style="left: 50%; top: 50%;">Marion<br>&amp; Skills</div>
+        <div class="mm-node" id="node-asso" style="left: 75%; top: 75%;" onclick="showPanel('asso')">Extracurricular</div>
+        <div class="mm-node center" style="left: 50%; top: 50%;">Marion<br>&amp; co</div>
     </div>
 
     <!-- Panel Experimental -->
     <div id="panel-exp" class="mm-panel">
-        <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Experimental Skills</h3>
+        <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Experimental skills</h3>
         <div class="sgrid">
             <div class="scard">
-                <h4>Mechanical Testing</h4>
+                <h4>Mechanical testing</h4>
                 <ul>
-                    <li>Tensile testing (stress-strain curves)</li>
+                    <li>Tensile testing (stress-strain)</li>
                     <li>Vickers hardness</li>
                     <li>Impact resistance</li>
-                    <li>Three-point bending & compression</li>
+                    <li>Three-point bending &amp; compression</li>
                 </ul>
             </div>
             <div class="scard">
-                <h4>Characterization</h4>
+                <h4>Material characterization</h4>
                 <ul>
                     <li>Microstructural analysis (SEM)</li>
-                    <li>Alloy composition & structure</li>
+                    <li>Alloy composition &amp; structure</li>
                     <li>Differential Scanning Calorimetry (DSC)</li>
-                    <li>IR / FTIR spectroscopy</li>
+                    <li>IR / FTIR Spectroscopy</li>
                 </ul>
             </div>
             <div class="scard">
-                <h4>Surface & Interface</h4>
+                <h4>Surface &amp; Interface</h4>
                 <ul>
-                    <li>Coating adhesion testing</li>
-                    <li>Contact angle & wettability</li>
+                    <li>Coating adhesion</li>
+                    <li>Contact angle &amp; wettability</li>
                 </ul>
             </div>
             <div class="scard">
-                <h4>Physical Measurements</h4>
+                <h4>Physical measurements</h4>
                 <ul>
-                    <li>Thermal & electrical conductivity</li>
-                    <li>Porosity & density analysis</li>
+                    <li>Thermal &amp; electrical conductivity</li>
+                    <li>Porosity &amp; density analysis</li>
                     <li>Dilatometry</li>
                 </ul>
             </div>
@@ -126,7 +134,7 @@
 
     <!-- Panel Software -->
     <div id="panel-soft" class="mm-panel">
-        <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Software & Tools</h3>
+        <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Software &amp; Tools</h3>
         <div class="mm-tags">
             <span class="mm-tag">Python</span>
             <span class="mm-tag">Java</span>
@@ -145,42 +153,42 @@
         <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Languages</h3>
         <div class="mm-tags">
             <span class="mm-tag">🇫🇷 French — Native</span>
-            <span class="mm-tag">🇬🇧 English — C1 (TOEIC prep)</span>
+            <span class="mm-tag">🇬🇧 English — C1</span>
             <span class="mm-tag">🇪🇸 Spanish — B1</span>
             <span class="mm-tag">🇩🇪 German — A2</span>
         </div>
     </div>
 
-    <!-- Panel Involvement -->
+    <!-- Panel Extracurricular -->
     <div id="panel-asso" class="mm-panel">
-        <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Volunteer Work & Leadership</h3>
+        <h3 style="color:var(--cyan); margin-bottom:20px; font-family:var(--display); font-size:22px;">Extracurricular commitments</h3>
         <div class="sgrid">
             <div class="scard">
                 <h4>Sports Office (BDS)</h4>
                 <ul>
-                    <li>Integration & event organization</li>
-                    <li>Sports management & logistics</li>
+                    <li>Integration &amp; event management</li>
+                    <li>Sports logistics &amp; coordination</li>
                 </ul>
             </div>
             <div class="scard">
-                <h4>Student Treasurer</h4>
+                <h4>Student Treasury</h4>
                 <ul>
-                    <li>Management across 13 student associations</li>
-                    <li>€500,000 global budget coordination</li>
+                    <li>Financial management for 13 associations</li>
+                    <li>Overall budget coordination of €500,000</li>
                 </ul>
             </div>
             <div class="scard">
                 <h4>Gendarmerie Reserve</h4>
                 <ul>
                     <li>Operational missions (Brigadier)</li>
-                    <li>Field security & command support</li>
+                    <li>Field security &amp; command support</li>
                 </ul>
             </div>
             <div class="scard">
                 <h4>First Aid (UNASS)</h4>
                 <ul>
                     <li>Communications officer</li>
-                    <li>Public outreach & social media</li>
+                    <li>Public outreach &amp; social media</li>
                 </ul>
             </div>
         </div>
@@ -190,7 +198,10 @@
 <footer class="foot" style="margin-top: 80px;">
     <div class="wrap" style="display: flex; justify-content: space-between; align-items: center;">
         <p>© 2026 Marion Lebeau</p>
-        <a href="mailto:marion.lebeau@imt-atlantique.net" style="color: var(--mist); text-decoration: none;">marion.lebeau@imt-atlantique.net</a>
+        <div style="display: flex; gap: 20px;">
+            <a href="mailto:marion.lebeau@imt-atlantique.net" style="color: var(--mist); text-decoration: none;">marion.lebeau@imt-atlantique.net</a>
+            <a href="https://www.linkedin.com/in/marion-lebeau02" target="_blank" style="color: var(--mist); text-decoration: none;">LinkedIn</a>
+        </div>
     </div>
 </footer>
 
