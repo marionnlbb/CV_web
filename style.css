@@ -4,6 +4,7 @@
   --line:rgba(159,178,214,.18);
   --display:'Unbounded',system-ui,sans-serif;
   --body:'Manrope',system-ui,sans-serif;
+  --muted:var(--mist); --accent:var(--cyan); --bg:var(--abyss); --text:var(--frost);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -371,3 +372,6 @@ footer.foot{padding:28px 0;font-size:13px;color:var(--mist);border-top:1px solid
   line-height: 1.5;
   margin: 0;
 }
+/* photos du parcours */
+.timeline-img{margin-top:1rem;border-radius:12px;overflow:hidden}
+.timeline-img img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
