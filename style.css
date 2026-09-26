@@ -205,20 +205,22 @@ footer.foot{padding:28px 0;font-size:13px;color:var(--mist);border-top:1px solid
 @media (max-width:640px){.hob-head{flex-direction:column;align-items:flex-start}.track{grid-auto-columns:82%}}
 
 /* ---------- corrections hero & stage badge ---------- */
-.hero { min-height: 85vh; padding-top: 80px; padding-bottom: 50px; }
-.hero-status-container { margin-top: 24px; display: flex; justify-content: flex-start; }
+/* ---------- harmonisation de la hauteur du hero sur toutes les pages ---------- */
+.hero { min-height: 48vh; padding-top: 90px; padding-bottom: 40px; }
+
+.hero-status-container { margin-top: 20px; display: flex; justify-content: flex-start; }
 .hero-status-badge {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 20px;
+    padding: 8px 18px;
     background: linear-gradient(135deg, rgba(95, 212, 238, 0.15), rgba(31, 66, 150, 0.4));
     border: 1.5px solid var(--cyan);
     border-radius: 50px;
     color: #ffffff;
     font-weight: 600;
-    font-size: 14px;
-    box-shadow: 0 0 25px rgba(95, 212, 238, 0.2);
+    font-size: 13.5px;
+    box-shadow: 0 0 20px rgba(95, 212, 238, 0.2);
     animation: pulseGlow 2.5s infinite ease-in-out;
 }
 .hero-status-badge i {
@@ -230,8 +232,8 @@ footer.foot{padding:28px 0;font-size:13px;color:var(--mist);border-top:1px solid
     animation: blinkDot 1.5s infinite;
 }
 @keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 0 15px rgba(95, 212, 238, 0.15); border-color: rgba(95, 212, 238, 0.5); }
-    50% { box-shadow: 0 0 35px rgba(95, 212, 238, 0.45); border-color: var(--cyan); }
+    0%, 100% { box-shadow: 0 0 12px rgba(95, 212, 238, 0.15); border-color: rgba(95, 212, 238, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(95, 212, 238, 0.4); border-color: var(--cyan); }
 }
 @keyframes blinkDot {
     0%, 100% { opacity: 1; transform: scale(1); }
