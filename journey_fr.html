@@ -1,428 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Marion Lebeau | Mon Parcours</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parcours · Marion Lebeau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+<body data-page="journey">
 
-<body>
-<header class="top-header">
-    <svg class="header-illustration" viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
-      <g opacity="0.07" stroke="#5A7A5A" stroke-width="1" fill="none">
-        <line x1="460" y1="205" x2="655" y2="205" stroke-width="0.8"/>
-        <line x1="460" y1="205" x2="460" y2="145" stroke-width="0.8"/>
-        <polyline points="465,200 475,199 482,197 486,190 488,180 489,170 490,162 491,155 492,162 493,172 495,185 498,193 504,196 510,194 514,188 516,180 517,174 518,168 519,174 520,182 522,190 526,196 535,198 542,196 545,190 547,183 548,177 549,183 550,190 553,196 560,199 572,200 580,198 584,192 586,185 587,178 588,185 589,192 591,198 600,200 620,201 640,201 652,200" stroke-width="1.2"/>
-        <circle cx="590" cy="55" r="35" stroke-width="0.8"/>
-        <circle cx="590" cy="55" r="5" fill="#5A7A5A"/>
-        <line x1="555" y1="20" x2="590" y2="55"/>
-        <line x1="550" y1="22" x2="585" y2="57"/>
-        <line x1="590" y1="55" x2="625" y2="20"/>
-        <line x1="590" y1="55" x2="640" y2="35"/>
-        <line x1="590" y1="55" x2="640" y2="55"/>
-        <line x1="555" y1="55" x2="625" y2="55" stroke-width="0.5"/>
-        <line x1="555" y1="65" x2="625" y2="65" stroke-width="0.5"/>
-        <line x1="555" y1="75" x2="625" y2="75" stroke-width="0.5"/>
-        <line x1="30" y1="80" x2="55" y2="65"/>
-        <line x1="55" y1="65" x2="80" y2="80"/>
-        <line x1="80" y1="80" x2="80" y2="110"/>
-        <line x1="80" y1="110" x2="55" y2="125"/>
-        <line x1="55" y1="125" x2="30" y2="110"/>
-        <line x1="30" y1="110" x2="30" y2="80"/>
-        <line x1="32" y1="78" x2="57" y2="63"/>
-        <line x1="78" y1="82" x2="78" y2="108"/>
-        <line x1="32" y1="112" x2="57" y2="127"/>
-        <line x1="55" y1="65" x2="55" y2="45"/>
-        <line x1="80" y1="80" x2="105" y2="65"/>
-        <line x1="105" y1="65" x2="130" y2="80"/>
-        <line x1="130" y1="80" x2="130" y2="110"/>
-        <line x1="105" y1="65" x2="105" y2="45"/>
-        <line x1="130" y1="110" x2="105" y2="125"/>
-        <line x1="80" y1="110" x2="105" y2="125"/>
-        <line x1="30" y1="80" x2="10" y2="65"/>
-        <line x1="30" y1="110" x2="10" y2="125"/>
-        <circle cx="55" cy="45" r="4" fill="#5A7A5A"/>
-        <circle cx="105" cy="45" r="4" fill="#5A7A5A"/>
-        <circle cx="10" cy="65" r="4" fill="#5A7A5A"/>
-        <circle cx="10" cy="125" r="4" fill="#5A7A5A"/>
-        <line x1="200" y1="110" x2="200" y2="15" stroke-width="0.8"/>
-        <line x1="200" y1="110" x2="350" y2="110" stroke-width="0.8"/>
-        <path d="M205,20 Q230,40 260,65 Q280,80 310,95 Q330,103 348,108" stroke-width="1.2"/>
-        <path d="M205,30 Q225,50 245,70 Q265,85 290,97 Q320,106 348,109" stroke-width="0.8"/>
-        <line x1="220" y1="35" x2="230" y2="50" stroke-width="0.5"/>
-        <line x1="235" y1="45" x2="245" y2="62" stroke-width="0.5"/>
-        <line x1="250" y1="58" x2="257" y2="73" stroke-width="0.5"/>
-        <line x1="265" y1="70" x2="270" y2="83" stroke-width="0.5"/>
-        <line x1="280" y1="80" x2="284" y2="91" stroke-width="0.5"/>
-        <line x1="30" y1="205" x2="180" y2="205" stroke-width="0.8"/>
-        <line x1="30" y1="205" x2="30" y2="155" stroke-width="0.8"/>
-        <polygon points="105,165 120,185 105,205 90,185"/>
-        <line x1="105" y1="155" x2="105" y2="165"/>
-        <line x1="90" y1="185" x2="120" y2="185" stroke-width="0.5"/>
-        <line x1="90" y1="183" x2="90" y2="187" stroke-width="0.8"/>
-        <line x1="120" y1="183" x2="120" y2="187" stroke-width="0.8"/>
-        <rect x="360" y="15" width="60" height="60" stroke-width="0.8"/>
-        <circle cx="360" cy="15" r="5" fill="#5A7A5A"/>
-        <circle cx="420" cy="15" r="5" fill="#5A7A5A"/>
-        <circle cx="360" cy="75" r="5" fill="#5A7A5A"/>
-        <circle cx="420" cy="75" r="5" fill="#5A7A5A"/>
-        <circle cx="390" cy="15" r="4" fill="#5A7A5A"/>
-        <circle cx="390" cy="75" r="4" fill="#5A7A5A"/>
-        <circle cx="360" cy="45" r="4" fill="#5A7A5A"/>
-        <circle cx="420" cy="45" r="4" fill="#5A7A5A"/>
-        <circle cx="390" cy="45" r="6" fill="#5A7A5A"/>
-        <line x1="360" y1="15" x2="385" y2="5"/>
-        <line x1="420" y1="15" x2="445" y2="5"/>
-        <line x1="385" y1="5" x2="445" y2="5"/>
-        <line x1="445" y1="5" x2="445" y2="65"/>
-        <line x1="420" y1="75" x2="445" y2="65"/>
-        <circle cx="445" cy="5" r="5" fill="#5A7A5A"/>
-        <circle cx="385" cy="5" r="4" fill="#5A7A5A"/>
-        <circle cx="445" cy="65" r="4" fill="#5A7A5A"/>
-        <circle cx="415" cy="5" r="4" fill="#5A7A5A"/>
-        <circle cx="445" cy="35" r="4" fill="#5A7A5A"/>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="index_fr.html">Marion Lebeau</a>
+    <nav><ul><li><a href="index_fr.html">À propos</a></li><li><a href="journey_fr.html" aria-current="page">Parcours</a></li><li><a href="projects_fr.html">Projets</a></li><li><a href="skills_fr.html">Compétences</a></li><li><a href="hobbies_fr.html">Loisirs</a></li></ul></nav>
+    <div class="lang"><a href="journey_fr.html" aria-current="true">FR</a><a href="journey.html">EN</a><a href="journey_es.html">ES</a></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <canvas id="waves" aria-hidden="true"></canvas>
+    <svg class="deco" viewBox="0 0 600 420" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <g class="st" stroke-width="2.2">
+        <path d="M330 250H450L510 208H390Z"/><path d="M330 130H450L510 88H390Z"/>
+        <path d="M330 250V130M450 250V130M510 208V88M390 208V88"/>
+      </g>
+      <g fill="#E6EEFF">
+        <circle cx="330" cy="250" r="8"/><circle cx="450" cy="250" r="8"/><circle cx="510" cy="208" r="8"/><circle cx="390" cy="208" r="8"/>
+        <circle cx="330" cy="130" r="8"/><circle cx="450" cy="130" r="8"/><circle cx="510" cy="88" r="8"/><circle cx="390" cy="88" r="8"/>
+      </g>
+      <g fill="#5FD4EE">
+        <circle cx="420" cy="229" r="6"/><circle cx="420" cy="109" r="6"/><circle cx="390" cy="190" r="6"/>
+        <circle cx="450" cy="148" r="6"/><circle cx="360" cy="169" r="6"/><circle cx="480" cy="169" r="6"/>
+      </g>
+      <g class="st" stroke-width="2.2">
+        <rect x="40" y="250" width="120" height="120" rx="4"/><path d="M34 370H166V380H34Z"/><path d="M40 280H160"/>
+        <rect x="86" y="270" width="28" height="22" rx="3"/><path d="M94 292L100 302L106 292"/>
+        <path d="M58 352H142"/>
+      </g>
+      <g class="ac" stroke-width="2.2"><path d="M86 346H114M83 339H117M86 332H114M89 325H111M92 318H108"/></g>
+      <g class="dim" stroke-width="1.6"><circle cx="190" cy="290" r="16"/><circle cx="190" cy="290" r="5"/><path d="M178 280Q150 262 118 276"/></g>
+      <g class="st" stroke-width="2"><path d="M230 380V270M230 380H350"/><path d="M345 375L350 380L345 385M225 275L230 270L235 275"/></g>
+      <path class="ac" stroke-width="3" d="M230 380L252 318Q262 300 285 296Q310 293 330 300"/>
+      <circle cx="330" cy="300" r="4.5" fill="#5FD4EE"/>
+      <g class="dim" stroke-width="1.8"><path d="M540 300L562 313V338L540 351L518 338V313Z"/></g>
+      <g fill="#9FB2D6"><circle cx="540" cy="300" r="4"/><circle cx="562" cy="313" r="4"/><circle cx="562" cy="338" r="4"/><circle cx="540" cy="351" r="4"/><circle cx="518" cy="338" r="4"/><circle cx="518" cy="313" r="4"/></g>
+      <g class="dim" stroke-width="1.6" transform="translate(120 120)">
+        <circle r="30"/><circle r="10"/>
+        <path d="M0-30V-40M0 30V40M-30 0H-40M30 0H40M21-21L28-28M-21 21L-28 28M21 21L28 28M-21-21L-28-28"/>
       </g>
     </svg>
-    <div class="language-switch">
-        <a href="journey_fr.html" class="lang-btn"><img src="fr.svg" class="flag-icon" alt="Français"></a>
-        <a href="journey.html" class="lang-btn"><img src="gb.svg" class="flag-icon" alt="English"></a>
-        <a href="journey_es.html" class="lang-btn"><img src="es.svg" class="flag-icon" alt="Español"></a>
+    <div class="wrap page-hero">
+      <h1>Mon parcours</h1>
+      <p>Des prépas au Master, les étapes qui m'ont menée aux matériaux.</p>
     </div>
-    <h1 class="name">MARION LEBEAU</h1>
-    <nav class="nav">
-        <a href="index_fr.html" class="nav-link">À propos</a>
-        <a href="journey_fr.html" class="nav-link active">Mon Parcours</a>
-        <a href="projects_fr.html" class="nav-link">Projets</a>
-        <a href="skills_fr.html" class="nav-link">Compétences</a>
-        <a href="hobbies_fr.html" class="nav-link">Loisirs</a>
-    </nav>
-</header>
-<div class="bandeau-stage">
-    🔔 <strong>Recherche un stage de 6 mois à partir de février 2027</strong> — élaboration, caractérisation des matériaux ou écoconception / ACV, en milieu industriel
-</div>
+  </section>
 
-    <div class="language-switch">
-        <a href="journey_fr.html" class="lang-btn">
-            <img src="fr.svg" class="flag-icon" alt="Français">
-        </a>
-        <a href="journey.html" class="lang-btn">
-            <img src="gb.svg" class="flag-icon" alt="English">
-        </a>
-        <a href="journey_es.html" class="lang-btn">
-            <img src="es.svg" class="flag-icon" alt="Español">
-        </a>
+  <section class="block page active">
+    <div class="wrap">
+      <ol class="timeline">
+        <li class="next"><time>Fév. 2027</time><div><h3>Stage R&amp;D de fin d'études</h3><div class="place">À trouver !</div><p>6 mois en conception, essais ou caractérisation. C'est peut-être chez vous.</p></div></li>
+        <li><time>2026 à 2027</time><div><h3>Master 2 Sciences et Génie des Matériaux</h3><div class="place">Université de Lorraine, Nancy</div><p>Élaboration et caractérisation des matériaux, essais mécaniques, CAO. 50&nbsp;% de travaux pratiques.</p></div></li>
+        <li><time>Mars à août 2026</time><div><h3>Stage ingénieure R&amp;D</h3><div class="place">CEA Cadarache</div><p>Développement d'outils de simulation numérique et traitement de grands volumes de résultats en Python.</p></div></li>
+        <li><time>Été 2025</time><div><h3>Stage en mécanique automobile</h3><div class="place">Garage SAX'Auto</div><p>Diagnostic de pannes et maintenance en atelier, au contact des techniciens.</p></div></li>
+        <li><time>Depuis 2024</time><div><h3>Diplôme d'ingénieure généraliste</h3><div class="place">IMT Atlantique</div><p>Formation par projets : prototypage, programmation embarquée, gestion de projet.</p></div></li>
+        <li><time>2023 à 2024</time><div><h3>Licence Matériaux et Énergie</h3><div class="place">Université de Picardie Jules Verne</div><p>Caractérisation des matériaux et transferts thermiques. Mention bien.</p></div></li>
+        <li><time>2021 à 2023</time><div><h3>CPGE MPSI puis L2 CUPGE Mécanique</h3><div class="place">Lycée militaire d'Autun, Université Toulouse III</div><p>Les bases scientifiques, et le goût de la rigueur.</p></div></li>
+      </ol>
     </div>
+  </section>
 
-<section class="content">
-    <p class="hobbies-intro">
-        Mon parcours s’est construit étape par étape : explorez chaque date pour en savoir plus.
-    </p>
-
-    <div class="timeline">
-<!-- ENCADRÉ 1 — LE PLUS RÉCENT -->
-<div class="timeline-item right">
-    <span class="timeline-dot"></span>
-
-    <div class="timeline-content">
-        <h3>2027 – Regarder vers l’avenir</h3>
+  <section class="contact">
+    <div class="wrap">
+      <h2>Travaillons ensemble</h2>
+      <p>Vous cherchez une stagiaire R&amp;D motivée pour février 2027 ? Écrivez-moi, je réponds vite.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:marion.lebeau@imt-atlantique.net">marion.lebeau@imt-atlantique.net</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/marion-lebeau02" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
+  </section>
+</main>
 
-    <p class="timeline-preview">
-        “Me spécialiser dans les matériaux, en restant ouverte sur la suite.”
-    </p>
-
-    <div class="timeline-detail">
-        <p>
-            Après cette année de césure consacrée à l’élaboration et la caractérisation des
-            matériaux, je prévois de retourner à IMT Atlantique pour ma dernière année, puis
-            de partir à l’étranger pour un échange académique, afin de continuer à approfondir
-            ma compréhension de la science des matériaux dans un autre environnement. Je n’ai
-            pas encore arrêté mon choix sur un secteur d’application précis — je préfère rester
-            ouverte à ce que ma curiosité me réserve — mais je veux terminer mes études
-            d’ingénieure avec une vraie expertise expérimentale, que je pourrai mettre au
-            service d’un environnement industriel exigeant.
-        </p>
-        <img src="materiauxmag.webp" alt="Laboratoire matériaux" class="journey-image">
-    </div>
-</div>
-
-<!-- ENCADRÉ 1B -->
-<div class="timeline-item left">
-    <span class="timeline-dot"></span>
-
-    <div class="timeline-content">
-        <h3>2026 – Plonger dans le génie nucléaire</h3>
-    </div>
-
-    <p class="timeline-preview">
-        “Transformer des modèles théoriques de cœur en données de réacteur réelles.”
-    </p>
-
-    <div class="timeline-detail">
-        <p>
-            Lors d’un stage de quatre mois au CEA Cadarache, j’ai travaillé sur la
-            construction d’un schéma de cœur neutronique complet, en utilisant des codes
-            de calcul déterministes développés en interne. L’objectif était de passer de
-            l’étape d’assemblage à un cœur complet. Ce qui m’a le plus plu, c’est
-            d’approfondir mes connaissances en neutronique — comprendre la physique et
-            les effets en jeu dans un cœur de réacteur. Le plus dur a été la prise en
-            main du code, qui a demandé de la persévérance.
-        </p>
-    </div>
-</div>
-
-<!-- ENCADRÉ 2 -->
-<div class="timeline-item right">
-    <span class="timeline-dot"></span>
-
-    <div class="timeline-content">
-        <h3>2025 – Partager et fédérer</h3>
-    </div>
-
-    <p class="timeline-preview">
-        “Créer, transmettre et rassembler.”
-    </p>
-
-    <div class="timeline-detail">
-        <p>
-            Engagée au Bureau des Sports et au sein de la Fédération étudiante, j’ai 
-            contribué à organiser des événements sportifs et solidaires, comme Octobre 
-            Rose ou un tournoi handisport qui a réuni près de 600 participants.
-            J’ai aussi géré la trésorerie et accompagné 13 associations, en répartissant 
-            un budget global de 500 K€ selon leurs besoins et leurs projets.
-        </p>
-        <img src="poulpy.jpeg" alt="Mechanical internship" class="journey-image">
-    </div>
-</div>
-
-<!-- ENCADRÉ 3 -->
-<div class="timeline-item left">
-    <span class="timeline-dot"></span>
-
-    <div class="timeline-content">
-        <h3>2024 – Expérience de terrain</h3>
-    </div>
-
-    <p class="timeline-preview">
-        “Apprendre en faisant.”
-    </p>
-
-    <div class="timeline-detail">
-        <p>
-            Lors de mon stage  de 1ère année, j’ai travaillé comme mécanicienne
-            dans un garage automobile.
-            J’ai réalisé des opérations de maintenance, des réparations de base
-            et participé au démontage et remontage de moteurs.
-            Cette expérience m’a fait prendre conscience des limites environnementales
-            de certaines pratiques industrielles et a renforcé mon envie de les améliorer.
-        </p>
-        <img src="stage.jpeg" alt="Stage en mécanique" class="journey-image">
-    </div>
-</div>
-
-<!-- ENCADRÉ 4 -->
-<div class="timeline-item right">
-    <span class="timeline-dot"></span>
-
-    <div class="timeline-content">
-        <h3>2025 – Servir au plus près de la population</h3>
-    </div>
-
-    <p class="timeline-preview">
-        “Même engagement, uniforme différent.”
-    </p>
-
-    <div class="timeline-detail">
-        <p>
-         Après mon arrivée à Nantes, j’ai intégré la réserve opérationnelle de la Gendarmerie
-        nationale. Une fois la formation terminée, j’ai été engagée comme brigadier‑chef 
-        pour renforcer les unités locales sur des missions ponctuelles. J’apprécie 
-        particulièrement les interventions de nuit : elles demandent de l’adaptabilité,
-        du sang‑froid et une capacité à prendre des décisions rapides dans des situations
-        parfois imprévues.
-        </p>
-        <img src="gendarmerieportrait.jpeg" alt="Réserve de la Gendarmerie" class="journey-image">
-    </div>
-</div>
-
-<!-- ENCADRÉ 5 -->
-<div class="timeline-item left">
-    <span class="timeline-dot"></span>
-
-    <div class="timeline-content">
-        <h3>2023 – Choisir l’ingénierie</h3>
-    </div>
-
-    <p class="timeline-preview">
-        “L’ingénierie comme suite logique.”
-    </p>
-
-    <div class="timeline-detail">
-        <p>
-        J’ai intégré IMT Atlantique pour me former aux enjeux énergétiques. Dès la première 
-        année, j’ai développé un vrai intérêt pour la thermodynamique et la mécanique des
-        fluides, deux disciplines qui m’ont donné envie de comprendre plus finement comment 
-        fonctionnent les systèmes énergétiques.
-        En deuxième année, je me suis spécialisée en énergie nucléaire. Cette filière m’a
-        permis d’acquérir une solide base scientifique : <strong>fonctionnement des réacteurs, 
-        cycle du combustible, gestion des déchets, modélisation Monte Carlo, facteurs humains,
-        physique nucléaire</strong>.
-        Même si je ne me projette pas forcément dans une carrière strictement nucléaire, cette 
-        formation m’a appris à travailler avec rigueur, à analyser des systèmes complexes et à
-        prendre en compte les enjeux de sûreté et de durabilité.
-        Ce qui m’attire aujourd’hui, c’est l’intersection entre l’énergie, la science des
-        matériaux et les solutions plus durables. Le nucléaire a été une étape cruciale, mais 
-        je me projette dans un domaine où je pourrai contribuer à des innovations plus responsables
-        et plus proches des enjeux environnementaux actuels.
-        </p>
-    </div>
-</div>
-
-<!-- ENCADRÉ 6 -->
-<div class="timeline-item right">
-    <span class="timeline-dot"></span>
-
-    <div class="timeline-content">
-        <h3>2021–2023 – Explorer pour mieux comprendre</h3>
-    </div>
-
-    <p class="timeline-preview">
-        “Essayer, ajuster, affiner ma direction.”
-    </p>
-
-    <div class="timeline-detail">
-        <div class="journey-section">
-            <h4>Autun — Classe préparatoire MPSI</h4>
-            <p>
-                J’ai commencé mes études supérieures en classe préparatoire MPSI au lycéé militaire 
-                d'Autun, accompagnée d’une préparation militaire renforcée (stages commando et 
-                Période Militaire Terre).
-            </p>
-        </div>
-
-        <div class="journey-section">
-            <h4>Toulouse — L2 Mécanique (Université Paul Sabatier)</h4>
-            <p>
-               J’ai ensuite poursuivi une licence renforcée en Mécanique à Toulouse, 
-                où j’ai étudié <strong>l’électromagnétisme, l’optique, la thermodynamique, 
-                les transferts thermiques ainsi que les bases de la mécanique (solide 
-                et fluides)</strong>.  
-            </p>
-        </div>
-
-        <div class="journey-section">
-            <h4>Amiens — L3 Énergie & Matériaux (UPJV)</h4>
-            <p>
-               J’ai ensuite réalisé ma troisième année en Énergie et Matériaux à Amiens, 
-                où j’ai étudié <strong>les enjeux énergétiques, la conversion d’énergie, la 
-                thermodynamique, les transferts thermiques, la mécanique des fluides, 
-                le génie électrique</strong> ainsi que les <strong>bases de la science et de la 
-                caractérisation des matériaux</strong>.
-            </p>
-            <p class="journey-conclusion">
-                Cette année a confirmé mon intérêt pour les matériaux,
-                le travail en laboratoire et le lien entre énergie et matière.
-            </p>
-        </div>
-    </div>
-</div>
-
-<!-- ENCADRÉ 7 -->
-<div class="timeline-item left">
-    <span class="timeline-dot"></span>
-
-    <div class="timeline-content">
-        <h3>2021 – Choisir les sciences</h3>
-    </div>
-
-    <p class="timeline-preview">
-        “Le bac scientifique a été, pour moi, le premier pas vers l’ingénierie.”
-    </p>
-
-    <div class="timeline-detail">
-        <p>
-            J’ai obtenu un bac scientifique mention Très Bien au lycée Marie‑Curie de 
-            Nogent‑sur‑Oise, avec les spécialités Physique‑Chimie, Mathématiques et Sciences 
-            de l’Ingénieur, ainsi que l’option Maths expertes.
-        </p>
-    </div>
-</div>
-
-<!-- ENCADRÉ 8 — LE PLUS ANCIEN -->
-<div class="timeline-item right">
-    <span class="timeline-dot"></span>
-
-    <div class="timeline-content">
-        <h3>2018 – Lycée</h3>
-        <strong>Ma première rencontre avec l’ingénierie</strong>
-    </div>
-
-    <p class="timeline-preview">
-        “Cette visite ne m’a pas seulement appris ce qu’était l’ingénierie, elle m’a montré que je pouvais en faire partie.”
-    </p>
-
-    <div class="timeline-detail">
-        <p>
-        En terminale, j’ai visité le Salon du Bourget avec l’association Elles Bougent,
-            et ça a été un vrai déclic : en échangeant avec des ingénieures passionnées, 
-            j’ai réalisé pour la première fois que l’ingénierie pouvait vraiment être fait
-            pour moi.
-        </p>
-        <img 
-            src="ellesboogent.jpeg" 
-            alt="Visite du Salon du Bourget avec Elles Bougent"
-            class="journey-image"
-        >    
-    </div>
-</div>
-
-
-    </div>
-</section>
-<footer class="footer">
-    <div class="footer-content">
-
-        <a href="mailto:marion.lebeau@imt-atlantique.net" class="footer-link">
-            <!-- Email SVG -->
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 
-                21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 
-                2.9 4 4 4Z" stroke="#ffffff" stroke-width="2" 
-                stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M22 6L12 13L2 6" stroke="#ffffff" 
-                stroke-width="2" stroke-linecap="round" 
-                stroke-linejoin="round"/>
-            </svg>
-            &#109;&#97;&#114;&#105;&#111;&#110;&#46;&#108;&#101;&#98;&#101;&#97;&#117;&#64;&#105;&#109;&#116;&#45;&#97;&#116;&#108;&#97;&#110;&#116;&#105;&#113;&#117;&#101;&#46;&#110;&#101;&#116;
-        </a>
-
-        <a href="https://www.linkedin.com/in/marion-lebeau02" target="_blank" class="footer-link">
-            <!-- LinkedIn SVG -->
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff">
-                <path d="M4.98 3.5C4.98 4.60457 4.08457 5.5 
-                2.98 5.5C1.87543 5.5 0.98 4.60457 0.98 
-                3.5C0.98 2.39543 1.87543 1.5 2.98 
-                1.5C4.08457 1.5 4.98 2.39543 4.98 3.5Z"/>
-                <path d="M0.98 8H4.98V22H0.98V8Z"/>
-                <path d="M8.98 8H12.74V10.02H12.8C13.32 9.02 
-                14.72 7.96 16.78 7.96C21.02 7.96 22 10.64 
-                22 14.28V22H18V15.2C18 13.36 17.96 11.04 
-                15.5 11.04C13 11.04 12.64 13.04 12.64 
-                15.08V22H8.98V8Z"/>
-            </svg>
-            linkedin.com/in/marion-lebeau02
-        </a>
-
-    </div>
-</footer>
-
-
-
+<footer class="foot"><div class="wrap">© 2026 Marion Lebeau</div></footer>
+<script src="script.js"></script>
 </body>
 </html>
 
